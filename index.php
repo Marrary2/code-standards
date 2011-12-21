@@ -1,5 +1,5 @@
 <?php
-$page_title = "Front-end Code Standards &amp; Best Practices";
+$page_title = "Padrões de código &amp; melhores práticas em Front-end";
 $page_keywords = "Isobar code standards, coding standards, frontend development, frontend best practices, html code standards, html5 code standards, css code standards, best code practices, development, frontend development";
 $page_description = "Isobar North America's Coding Standards and Frontend development Best Practices";
 $protocol = (strstr('https',$_SERVER['SERVER_PROTOCOL']) === false)?'http':'https'; 
@@ -28,7 +28,7 @@ include_once('layout/header.php');
 
 			
 			<div id="main" role="document">
-				<h1>Front-end Code Standards &amp; Best Practices</h1>
+				<h1><?php echo $page_title; ?></h1>
 			
 				<?php
 				include_once('sections/general.html');
