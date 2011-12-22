@@ -85,46 +85,45 @@
 	
 	<ul>
 		<li>Use o elemento <code>&lt;p&gt;</code> para parágrafos ao invés de duplo <code>&lt;br&gt;</code>.</li>
-		<li>Faça o uso de <code>&lt;dl&gt;</code> (lista de definições) e <code>&lt;blockquote&gt;</code>, quando apropriado.</li>
-		<li>Items in list form should always be housed in a UL, OL, or DL, never a set of DIVs or Ps.</li>
-		<li>Use <code>label</code> fields to label each form field, the <code>for</code> attribute should associate itself with the input field, so users can click the labels. 
-			<code>cursor:pointer;</code> on the label is wise, as well. <sup><a href="http://www.accessifyforum.com/viewtopic.php?t=1926#14178">note 1</a> 
-			<a href="http://www.accessifyforum.com/viewtopic.php?t=6738">note 2</a></sup>
-		</li>
-		<li>Do not use the size attribute on your input fields. The size attribute is relative to the font-size of the text inside the input. Instead use css width.</li>
-		<li>Place an html comment on some closing div tags to indicate what element you're closing. It will help when there is lots of nesting and indentation.</li>
-		<li>Tables shouldn't be used for page layout.</li>
-		<li>Use <a href="http://en.wikipedia.org/wiki/Microformat">microformats</a> and/or Microdata where appropriate, specifically hCard and adr.</li>
-		<li>Make use of THEAD, TBODY, and TH tags (and Scope attribute) when appropriate.
-
-			<figure class="preCode">Table markup with proper syntax (THEAD,TBODY,TH [scope])</figure>
+		<li>Faça o uso de <code>&lt;dl&gt;</code> (lista de definição) e <code>&lt;blockquote&gt;</code>, quando apropriado.</li>
+		<li>Listas devem ser sempre representadas por uma <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, ou <code>&lt;dl&gt;</code>, nunca um conjunto de <code>&lt;div&gt;</code> ou <code>&lt;p&gt;</code>.</li>
+    <li>Use a tag <code>&lt;label&gt;</code> para rotular cada campo de um formulário, o atributo <code>for</code> deve associar o rótulo ao campo, para que os usuários possam clicar no rótulo e assim dar foco no campo associado.
+      <code>cursor:pointer;</code> no rótulo é desejável. <sup><a href="http://www.accessifyforum.com/viewtopic.php?t=1926#14178">nota 1</a> 
+      <a href="http://www.accessifyforum.com/viewtopic.php?t=6738">nota 2</a></sup>
+    </li>
+    <li>Não use o atributo <code>size</code> nos seus campos. O atributo <code>size</code> é relativo ao tamanho da fonte do campo de texto. Use a propriedade <code>width</code> do CSS para isto.</li>
+    <li>Escreva comentários no fechamento de <code>&lt;div&gt;</code> indicando qual é o elemento que está sendo fechado (id ou class). Isso ajudará quando há muitas elementos aninhados e muita identação.</li>
+    <li>Tabelas não devem ser utilizadas para layouts de página.</li>
+    <li>Use <a href="http://en.wikipedia.org/wiki/Microformat">microformats</a> e ou Microdata quando for apropriado, especialmente <a href="http://microformats.org/wiki/hcard">hCard</a> e <a href="http://microformats.org/wiki/adr">adr</a>.</li>
+    <li>Faça o uso dos elementos <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> e <code>&lt;th&gt;</code> (e o atributo <code>scope</code>) quando apropriado.
+			<figure class="preCode">Marcação de tabela com a sintaxe adequada.(<code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;th&gt;</code>, <code>scope</code>)</figure>
 			<textarea class="brush:html">
-				<table summary="This is a chart of year-end returns for 2005.">
+				<table summary="Este é o sumário desta tabela">
 					<thead>
 						<tr>
-							<th scope="col">Table header 1</th>
-							<th scope="col">Table header 2</th>
+							<th scope="col">Tabela cabeçalho 1</th>
+							<th scope="col">Tabela cabeçalho 2</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td>Table data 1</td>
-							<td>Table data 2</td>
+							<td>Dados da tabela 1</td>
+							<td>Dados da tabela 2</td>
 						</tr>
 					</tbody>
 				</table>
 			</textarea>
 		</li>
 	
-		<li>Always use title-case for headers and titles. Do not use all caps or all lowercase titles in markup, instead apply the CSS property <code>text-transform:uppercase/lowercase</code>.</li>
+    <li>Utilize iniciais maiúsculas para cabeçalhos e títulos. Nunca use apenas caixa alta ou baixa na marcação de títulos, utilize a propriedade CSS <code>text-transform:uppercase/lowercase</code> para isso.</li>
 	</ul>	
 
-	<h3>Quoting Attributes</h3>
+	<h3>Notação de atributos</h3>
 	
-	<p>While the HTML5 specification defines quotes around attributes as optional for consistency with attributes that accept whitespace, all attributes should be quoted. </p> 
+  <p>Apesar da especificação do HTML5 definir aspas em volta de atributos como opcional, para manter a consistência, todos os atributos devem utilizar aspas.</p>
 	
 	<textarea class="brush:html">
-		<p class="line note" data-attribute="106">This is my paragraph of special text.</p>
+		<p class="line note" data-attribute="106">Este é o meu parágrafo de um texto especial.</p>
 	</textarea>
 	
 </section>
