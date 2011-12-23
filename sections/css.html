@@ -7,35 +7,36 @@
 		<img class="icon" src="img/layout/icon-curly.png" alt="{}" />
 		<h1>CSS</h1>
 		
-		<p>The second component of a web page is the presentation information contained in the Cascading Style Sheet (<abbr title="Cascading Style Sheets">CSS</abbr>.) Web browsers successful implementation of CSS has given a whole generation of web authors site-wide control over the look and feel of their web sites.</p>
+    <p>O segundo componente de uma página web é a informação de apresentação contida na Folha de Estilo em Cascata (do inglês <abbr title="Cascading Style Sheets">CSS</abbr>). A implementação bem sucedida de CSS nos navegadores deu a uma geração inteira de profissionais web um controle abrangente sobre o aspecto visual de seus sites.</p>
 		
-		<p>Just as the information on a web page is semantically described in the <a href="#markup">HTML Markup</a>, CSS describes all presentation aspects of the page via a description of it's visual properties. CSS is powerful in that these properties are mixed and matched via identifiers to control the page's layout and visual characteristics through the layering of style rules (the "cascade").</p>
+    <p>Assim como a informação da página é semânticamente descrita pela <a href="#markup">marcação HTML</a>, o CSS define todos os aspectos de apresentação da página atráves da descrição de suas propriedades visuais. CSS é poderoso, pois suas propriedades são misturadas e combinadas por identificadores que controlam o layout e as características visuais da página, formando camadas de regras de estilo (a "cascata").</p>
 	</div>
 
-	<h3>General Coding Principles</h3>
+	<h3>Principios Gerais de Codificação</h3>
 	
 	<ul>
-		<li>Add CSS through external files, minimizing the # of files, if possible. It should always be in the HEAD of the document.</li>
-		<li>Use the LINK tag to include, <a href="http://blog.amodernfable.com/2008/01/21/thoughts-on-linking-to-stylesheets/">never the @import.</a>
+    <li>Carregue seu CSS através de arquivos externos, utilizando o menor número de arquivos possível, e sempre de dentro do elemento <code>&lt;head&gt;</code> da página.</li>
+		<li>Use o elemento <code>&lt;link&gt;</code>, <a href="http://blog.amodernfable.com/2008/01/21/thoughts-on-linking-to-stylesheets/">nunca @import</a>.</li>
 	
-			<figure class="preCode">Including a stylesheet</figure>
+			<figure class="preCode">Incluindo folha de estilo</figure>
 			<textarea class="brush:html">
-				<link rel="stylesheet" type="text/css" href="myStylesheet.css" />
+				<link rel="stylesheet" type="text/css" href="style.css" />
 			</textarea>
 	
-			<figure class="preCode">Don't use inline styling</figure>
+			<figure class="preCode">Nunca utilize estilo <strong>inline</strong></figure>
 			<textarea class="brush:html">
-				<p style="font-size: 12px; color: #FFFFFF">This is poor form, I say</p>
+				<p style="font-size: 12px; color: #fff">Isso é ruim, eu digo</p>
 			</textarea>
 			
 			</li>
 
-		<li>Don't include styles inline in the document, either in a style tag or on the elements. It's harder to track down style rules.</li>	
-		<li>Use a reset CSS file (like the one present in H5BP or the <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyers reset</a>) to zero our cross-browser weirdness.</li>
-		<li>Use a font-normalization file like <a href="http://developer.yahoo.com/yui/fonts/">YUI fonts.css</a></li>	
-		<li>Elements that occur only once inside a document should use IDs, otherwise, use classes.</li>
-		<li>Understand <a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">cascading and selector specificity</a> so you can write very terse and effective code.</li>
-		<li>Write selectors that are optimized for speed. Where possible, avoid expensive CSS selectors. For example, avoid the * wildcard selector and don't qualify ID selectors (e.g. <code>div#myid</code>) or class selectors (e.g. <code>table.results</code>.)  This is especially important with web applications where speed is paramount and there can be thousands or even tens of thousands of DOM elements. More on <a href="https://developer.mozilla.org/en/Writing_Efficient_CSS">writing efficient CSS on the MDC</a>.</li>
+    <li>Não inclua estilos inline no documento nem elementos <code>&lt;style&gt;</code>. Fica mais dificil para rastrear as regras.</li>
+    <li>Use um CSS reset (como um presente no H5BP ou o <a href="http://meyerweb.com/eric/tools/css/reset/">Eric Meyers reset</a>) para equalizar as diferenças entre os navegadores.</li>
+    
+    <li>Use um arquivo de normalização de fonte como o <a href="http://developer.yahoo.com/yui/fonts/">YUI fonts.css</a>.</li>
+    <li>Elementos que ocorrem uma única vez dentro de um documento devem utilizar ID, os demais elementos utilizam classes.</li>
+    <li>Entenda <a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">cascata e especificidade de seletores</a> para que você possa escrever um código mais conciso e efetivo.</li>
+    <li>Escreva seletores que são otimizados para peformance. Onde possível, evite seletores caros, como por exemplo o seletor curinga - <code>*</code>. Evite também qualificar seletores de ID - <code>div#myid</code>, ou seletores de classe <code>table.results</code>. Isso é especialmente importante em aplicações web onde performance é soberana e pode haver milhares ou até mesmo dezenas de milhares de elementos DOM. Mais em <a href="https://developer.mozilla.org/en/Writing_Efficient_CSS">escrevendo CSS eficiente</a> no <abbr title="Mozilla Developer Center">MDC</a>.</li>
 	</ul>
 	
 	<h3>CSS Box Model</h3>
