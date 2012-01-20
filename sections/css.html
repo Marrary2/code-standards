@@ -36,27 +36,31 @@
     <li>Use um arquivo de normalização de fonte como o <a href="http://developer.yahoo.com/yui/fonts/">YUI fonts.css</a>.</li>
     <li>Elementos que ocorrem uma única vez dentro de um documento devem utilizar ID, os demais elementos utilizam classes.</li>
     <li>Entenda <a href="http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html">cascata e especificidade de seletores</a> para que você possa escrever um código mais conciso e efetivo.</li>
-    <li>Escreva seletores que são otimizados para peformance. Onde possível, evite seletores caros, como por exemplo o seletor curinga - <code>*</code>. Evite também qualificar seletores de ID - <code>div#myid</code>, ou seletores de classe <code>table.results</code>. Isso é especialmente importante em aplicações web onde performance é soberana e pode haver milhares ou até mesmo dezenas de milhares de elementos DOM. Mais em <a href="https://developer.mozilla.org/en/Writing_Efficient_CSS">escrevendo CSS eficiente</a> no <abbr title="Mozilla Developer Center">MDC</a>.</li>
+    <li>Escreva seletores que são otimizados para peformance. Onde possível, evite seletores caros, como por exemplo o seletor curinga - <code>*</code>. Evite também qualificar seletores de ID - <code>div#myid</code>, ou seletores de classe <code>table.results</code>. Isso é especialmente importante em aplicações web onde performance é soberana e pode haver milhares ou até mesmo dezenas de milhares de elementos DOM. Leia mais em <a href="https://developer.mozilla.org/en/Writing_Efficient_CSS">escrevendo CSS eficiente</a> no <abbr title="Mozilla Developer Center">MDC</a>.</li>
 	</ul>
 	
-	<h3>CSS Box Model</h3>
+	<h3>Modelo CSS das caixas</h3>
 
-	<p>Intimate knowledge and understanding of the CSS and browser-based box model is necessary for conquering the fundamentals of CSS layouts.</p>
+	<p>Conhecimento íntimo, compreensão do CSS e uma base no modelo de caixa do navegador são necessários para conquistar os fundamentos sobre layouts CSS.</p>
 	
 	<figure class="extra">
 		<img src="img/box_model.png" alt="CSS Box Model" title="CSS Box Model" />
-		<figcaption><small>3D CSS Box Model</small> diagram by <a href="http://hicksdesign.co.uk/boxmodel/">Jon Hicks</a>.</small></figcaption>
+		<figcaption><small>Modelo CSS de caixa em 3D</small> diagrama por  <a href="http://hicksdesign.co.uk/boxmodel/">Jon Hicks</a>.</small></figcaption>
 	</figure>
 	
-	<h3>CSS Validation</h3>
+	<h3>CSS Validação</h3>
 	
-	<p>We typically don't use the <a href="http://jigsaw.w3.org/css-validator/">W3C validator</a>.</p>
+	<p>Geralmente não utilizamos o <a href="http://jigsaw.w3.org/css-validator/">validador da W3C</a>.</p>	
 	
+	<h3>Formatação do CSS</h3>
 	
-	<h3>CSS Formatting</h3>
-	
-	<p>At minimum, format CSS with selectors on one line and each property on its own line. The declarations are indented. </p>
-	<p>As an enhancement to that style, related or child styles and additional 2 or 4 spaces. That allows for hierarchical scanning and organization and makes (for some people) an easier-to-read style sheet.</p>
+	<p>No mínimo, a formatação do CSS com seletores em uma linha e cada propriedade em sua própria linha. As declarações devem ser identadas.</p>
+
+	<p>Insira um reforço com 2 ou 4 espaços para estilos relacionados ou filhos. Isso permite uma organização visual hierárquica e faz (para algumas pessoas) uma folha de estilo mais fácil de ler.</p>
+
+	<!--<p>As an enhancement to that style, related or child styles and additional 2 or 4 spaces. That allows for hierarchical scanning and organization and makes (for some people) an easier-to-read style sheet.</p>-->
+
+	<p></p>
     <textarea class="brush:css">
     .post-list li a{
 		color:#A8A8A8;
@@ -73,7 +77,8 @@
     <p>For multiple author environments, single line CSS should be avoided because it can cause issues with version control. </p>
 	<h4>Alphabetize</h4>
     <p>If you're performance obsessed <a href="http://www.barryvan.com.au/2009/08/css-minifier-and-alphabetiser/">alphabetizing CSS properties increases the odds of larger repeatable patterns being present to aid in GZIP compression</a>. </p> 
-<h3>Classes vs. IDs</h3>
+	
+	<h3>Classes vs. IDs</h3>
 	
 	<p>You should only give elements an ID attribute if they are unique. They should be applied to that element only and nothing else. Classes can be applied to multiple elements that share the same style properties. Things that should look and work in the same way can have the same class name.</p>
 	

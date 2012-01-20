@@ -47,9 +47,9 @@ include_once('layout/header.php');
 			</div><!--! End of #main section !-->
 			
 			<nav id="side" class="nav-right" role="navigation">
-				<h3 class="toc-title">Table of Contents</h3>
+				<h3 class="toc-title">Índice</h3>
 				<ul id="toc" style="display:none"></ul>
-				<noscript><p><a href="http://enable-javascript.com">Please enable JavaScript</a>.</p></noscript>
+				<noscript><p><a href="http://enable-javascript.com">Por favor habilite o Javascript</a>.</p></noscript>
 			</nav>
 			
 		</div><!--! end of #container !-->
