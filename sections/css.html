@@ -41,11 +41,11 @@
 	
 	<h3>Modelo CSS das caixas</h3>
 
-	<p>Conhecimento íntimo, compreensão do CSS e uma base no modelo de caixa do navegador são necessários para conquistar os fundamentos sobre layouts CSS.</p>
+	<p>Conhecimento íntimo, compreensão do CSS e ter uma boa base no modelo de caixa do navegador, são necessários para conquistar os fundamentos sobre os layouts CSS.</p>
 	
 	<figure class="extra">
 		<img src="img/box_model.png" alt="CSS Box Model" title="CSS Box Model" />
-		<figcaption><small>Modelo CSS de caixa em 3D</small> diagrama por  <a href="http://hicksdesign.co.uk/boxmodel/">Jon Hicks</a>.</small></figcaption>
+		<figcaption><small>Modelo CSS de caixa em 3D</small> diagrama por <a href="http://hicksdesign.co.uk/boxmodel/">Jon Hicks</a>.</small></figcaption>
 	</figure>
 	
 	<h3>CSS Validação</h3>
@@ -54,13 +54,10 @@
 	
 	<h3>Formatação do CSS</h3>
 	
-	<p>No mínimo, a formatação do CSS com seletores em uma linha e cada propriedade em sua própria linha. As declarações devem ser identadas.</p>
+	<p>Mantenha a formatação dos seletores CSS na mesma linha e cada propriedade em sua própria linha. As declarações devem ser identadas.</p>
 
-	<p>Insira um reforço com 2 ou 4 espaços para estilos relacionados ou filhos. Isso permite uma organização visual hierárquica e faz (para algumas pessoas) uma folha de estilo mais fácil de ler.</p>
+	<p>Insira um reforço com 2 ou 4 espaços para estilos relacionados ou filhos. Isso permite uma organização visual hierárquica e torna mais fácil (para algumas pessoas) a leitura da folha de estilos.</p>
 
-	<!--<p>As an enhancement to that style, related or child styles and additional 2 or 4 spaces. That allows for hierarchical scanning and organization and makes (for some people) an easier-to-read style sheet.</p>-->
-
-	<p></p>
     <textarea class="brush:css">
     .post-list li a{
 		color:#A8A8A8;
@@ -74,81 +71,81 @@
        		 text-transform:uppercase;
      	}
     </textarea>
-    <p>For multiple author environments, single line CSS should be avoided because it can cause issues with version control. </p>
-	<h4>Alphabetize</h4>
-    <p>If you're performance obsessed <a href="http://www.barryvan.com.au/2009/08/css-minifier-and-alphabetiser/">alphabetizing CSS properties increases the odds of larger repeatable patterns being present to aid in GZIP compression</a>. </p> 
+
+    <p>No caso de um ambiente com vários desenvolvedores, CSS em uma única linha deve ser evitado porque pode causar problemas com o controle de versão.</p>
+
+	<h4>Alfabetizar</h4>
+
+	<p>Se você for um obcecado por performance <a href="http://www.barryvan.com.au/2009/08/css-minifier-and-alphabetiser/">alfabetizando as propriedades CSS você aumenta as chances de maiores padrões repetitivos estarem presentes para auxiliar na compressão GZIP</a>.</p> 
 	
 	<h3>Classes vs. IDs</h3>
-	
-	<p>You should only give elements an ID attribute if they are unique. They should be applied to that element only and nothing else. Classes can be applied to multiple elements that share the same style properties. Things that should look and work in the same way can have the same class name.</p>
+
+	<p>Você só deve dar atributos ID para um elemento se ele for único. Eles devem ser aplicados apenas para este elemento e nada mais. Classes podem ser aplicadas em múltiplos elementos quando estes compartilham as mesmas propriedades de estilo. Coisas que devem parecer e funcionar da mesma forma podem ter o mesmo nome de classe.</p>
 	
 	<textarea class="brush:html">
 		<ul id="categories">
-			<li class="item">Category 1</li>
-			<li class="item">Category 2</li>
-			<li class="item">Category 3</li>
+			<li class="item">Categoria 1</li>
+			<li class="item">Categoria 2</li>
+			<li class="item">Categoria 3</li>
 		</ul>
 	</textarea>
 	
-	<h3>Naming Conventions for Selectors</h3>
+	<h3>Convenção de nomenclatura para seletores</h3>
+
+	<p>É sempre preferível dar nome a algo, seja ele de um ID ou uma classe, pela natureza do <strong>o que ele é</strong> ao invés do <strong>que ele parece</strong>. Por exemplo, um nome de classe <code>bigBlueText</code> para uma nota especial em uma página é algo totalmente sem sentido se tiver sido alterado para ter um texto menor com a cor vermelha. Usando uma convenção mais inteligente como <code>noteText</code> é melhor porque quando ocorrerem mudanças visuais o nome continuará a fazer sentido.</p>	
 	
-	<p>It is always preferable to name something, be it an ID or a class, by the nature of <strong>what it is</strong> rather than by <strong>what it looks like</strong>. For instance, a class name of <code>bigBlueText</code> for a special note on a page is quite meaningless if it has been changed to have a small red text color. Using a more intelligent convention such as <code>noteText</code> is better because when the  visual style changes it still makes sense.</p>
-	
-	
-	<h3>Selectors</h3>
-	
-	<p>The <a href="http://www.w3.org/TR/2009/PR-css3-selectors-20091215/">CSS Selectors Level 3</a> specification introduces a whole new set of <a href="http://www.w3.org/TR/css3-selectors/#selectors">CSS Selectors</a> that are extremely useful for better selection of elements.</p>
-	
+	<h3>Seletores</h3>
+
+	<p>Os <a href="http://www.w3.org/TR/2009/PR-css3-selectors-20091215/">Seletores CSS Nível 3</a> apresentam um novo conjunto de seletores CSS que são extremamente úteis para atingir um elemento.</p>
 	
 	<h4>Pseudo-classes</h4>
-	
-	<p><a href="http://www.w3.org/TR/css3-selectors/#pseudo-classes">Pseudo-classes</a> enable you to dynamically style content. Some pseudo-classes have existed since CSS1 (<code>:visited, :hover</code>, etc.) and CSS2 (<code>:first-child, :lang</code>). As of CSS3, 16 new pseudo-classes have been added to the list and are especially useful for styling dynamic content. <a href="http://www.smashingmagazine.com/2011/03/30/how-to-use-css3-pseudo-classes/">Learn how to use pseudo-classes in-depth</a>.</p>
-	
-	
-	<h4>Combinators &amp; Attribute Selectors</h4>
-	
-	<p><a href="http://www.w3.org/TR/css3-selectors/#combinators">Combinators</a> provide shortcuts for selecting elements that are a descendant element, a child element, or an element's sibling.</p>
-	
-	<p><a href="http://www.w3.org/TR/css3-selectors/#attribute-selectors">Attribute Selectors</a> are great for finding elements that have a specific attribute and/or specific value. Knowledge of regular expressions helps with attribute selectors. </p>
 
+	<p><a href="http://www.w3.org/TR/css3-selectors/#pseudo-classes">Pseudo-classes</a> possibilitam que você estilize dinamicamente um conteúdo. Algumas pseudo-classes existem desde o CSS1 (<code>:visited, :hover</code>, etc.) e no CSS2 (<code>:first-child, :lang</code>). No CSS3, 16 novas pseudo-classes foram adicionadas na lista e são especialmente úteis para estilar dinamicamente o conteúdo.</p>
 	
+	<h4>Combinadores &amp; Atributos Seletores</h4>
+
+	<p><a href="http://www.w3.org/TR/css3-selectors/#combinators">Combinadores</a> fornecem atalhos para a seleção de elementos que são descendentes, filhos, ou irmãos.</p>
+
+	<p><a href="http://www.w3.org/TR/css3-selectors/#attribute-selectors">Atributos Seletores</a> são bons para localizar elementos que possuam um atributo específico e/ou um valor específico. Conhecimento de expressões regulares ajudam com atributos seletores.</p>
+
+	<h4>Especificidade</h4>
+
+	<p>Navegadores <a href="http://www.w3.org/TR/2009/PR-css3-selectors-20091215/">calculam a especificidade</a> para determinar quais regras do CSS deveriam ser aplicadas. Se dois seletores aplicam para o mesmo elemento, o que tiver com <strong>maior especificidade ganha</strong>.</p>
+
+	<p>IDs tem uma especificidade maior que os seletores de atributo, e seletores de classe têm maior especificidade do que qualquer número de elementos de seleção. Sempre tente usar IDs para aumentar a especificidade. Há momentos em que podemos tentar aplicar uma regra CSS a um elemento e ele não funciona, não importa o que tentamos. Provavelmente porque a especificidade do seletor usado é inferior ao outro e as propriedades do mais alto está tomando precedência sobre aqueles que você deseja aplicar. Isto é mais comum quando se trabalha com uma folha de estilos maior e mais complexa. Geralmente este não é um grande problema quando se trata de projetos menores.</p>
 	
-<h4>Specificity</h4>
+	<h5>Calculando especificidade</h5>
+
+	<p>Ao trabalhar com uma larga e complexa folha de estilos, sempre é útil saber como calcular o valor de especificidade de um seletor  para salvar o seu tempo e tornar os seus seletores mais eficientes.</p>
 	
-	<p>Browsers <a href="http://www.w3.org/TR/2009/PR-css3-selectors-20091215/">calculate a selector's specificity</a> to determine which CSS rule should apply. If two selectors apply to the same element, the one with the <strong>higher specificity wins</strong>.</p>
-	
-	<p>IDs have a higher specificity than attribute selectors do, and class selectors have higher specificity than any number of element selectors. Always try to use IDs to increase the specificity. There are times when we may try to apply a CSS rule to an element and it does not work no matter what we try. This is likely because the specificity of the selector used is lower than another one and the properties of the higher one are taking precedence over those you want to apply. This is more common in working with larger more complex stylesheets. It isn't a big issue with smaller projects usually.</p>
-	
-	<h5>Calculating specifity</h5>
-	
-	<p>When working with a large and complex stylesheet it helps to know how to calculate the value of a selector's specificity, to save you time and to make your selectors more efficient.</p>
-	
-	<p>Specificity is calculated by counting various components of your CSS and expressing them in a form (a,b,c,d).</p>
+	<!--<p>Specificity is calculated by counting various components of your CSS and expressing them in a form (a,b,c,d).</p>-->
+
+	<p>Especificidade é calculada contando vários componentes do seu CSS e expressá-los de uma forma (a,b,c,d).
 	
 	<ul>
-		<li>Element, Pseudo Element: d = 1 – (0,0,0,1)</li>
-		<li>Class, Pseudo class, Attribute: c = 1 – (0,0,1,0)</li>
+		<li>Elemento, Pseudo Elemento: d = 1 – (0,0,0,1)</li>
+		<li>Classe, Pseudo-classe, Attributo: c = 1 – (0,0,1,0)</li>
 		<li>Id: b = 1 – (0,1,0,0)</li>
-		<li>Inline Style: a = 1 – (1,0,0,0)</li>
+		<li>Estilo em linha (inline): a = 1 – (1,0,0,0)</li>
 	</ul>
-	
-	<p>However, it may be better to use a specificity calculator.</p>
+
+	<p>No entanto, pode ser melhor usar uma calculadora de especificidade.</p>
 	
 	<ul>
-		<li><a href="">Specificity Calculator</a></li>
-		<li><a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">Some things you should know about specificity</a></li>
-		<li><a href="http://www.brunildo.org/test/IEASpec.html#a">IE Specificity bugs</a></li>
+		<li><a href="">Calculadora de Especificidade</a></li>
+		<li><a href="http://www.smashingmagazine.com/2007/07/27/css-specificity-things-you-should-know/">Algumas coisas que você deve saber sobre especificidade.</a></li>
+		<li><a href="http://www.brunildo.org/test/IEASpec.html#a">IE bugs de especificidade</a></li>
 	</ul>
-	
-	<p>Using <code>!important</code> overrides all specificity no matter how high it is. We like to avoid using it for this reason. Most of the time it is not necessary. Even if you need to override a selector in a stylesheet you don't have access to, there are usually ways to override it without using !important. Avoid using it if possible.</p>
 
+	<p>Usando <code>!important</code> você substitui todas as especificidades, não importa quão alto for. Nós gostamos de evitar usá-lo por este motivo. Na maioria das vezes não é necessário. Mesmo se você precisa substituir um seletor em uma folha de estilo que você não tem acesso, geralmente há formas de substituir sem usar <code>!important</code>. Se possível, evite usá-lo.</p>
 
 	<h3>Pixels vs. Ems</h3>
+
+	<!--<p>We use the <code>px</code> unit of measurement to define <code>font-size</code>, because it offers absolute control over text. We realize that using the <code>em</code> unit for font sizing used to be popular, to accommodate for Internet Explorer 6 not resizing pixel based text. However, all major browsers (including <abbr title="Internet Explorer 7">IE7</abbr> and <abbr title="Internet Explorer 8">IE8</abbr>) now support text resizing of pixel units and/or full-page zooming. Since <abbr title="Internet Explorer 6">IE6</abbr> is largely considered deprecated, pixels sizing is preferred. Additionally, unit-less <code>line-height</code> is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the <code>font-size</code>.</p>-->
 	
-	<p>We use the <code>px</code> unit of measurement to define <code>font size</code>, because it offers absolute control over text. We realize that using the <code>em</code> unit for font sizing used to be popular, to accommodate for Internet Explorer 6 not resizing pixel based text. However, all major browsers (including <abbr title="Internet Explorer 7">IE7</abbr> and <abbr title="Internet Explorer 8">IE8</abbr>) now support text resizing of pixel units and/or full-page zooming. Since <abbr title="Internet Explorer 6">IE6</abbr> is largely considered deprecated, pixels sizing is preferred. Additionally, unit-less <code>line-height</code> is preferred because it does not inherit a percentage value of its parent element, but instead is based on a multiplier of the <code>font-size</code>.</p>
+	<p>Nós usamos <code>px</code> como unidade de medida para definir o <code>font-size</code>, porque oferece o controle absoluto sobre o texto. Nós percebemos que a unidade de medida <code>em</code> se tornou popular para acomodar o Internet Explorer 6, já que não redimensiona pixel com base em texto. No entanto, agora todos os principais navegadores (incluindo <abbr title="Internet Explorer 7">IE7</abbr> e <abbr title="Internet Explorer 8">IE8</abbr>) suportam texto redimensionado com unidade baseada em pixel e/ou zoom na página inteira. Desde que o <abbr title="Internet Explorer 6">IE6</abbr> foi considerado obsoleto, é preferível tamanho em pixels. Além disso, a unidade <code>line-height</code> deve ser usada também, porque não herda um valor percentual do seu elemento pai, mas é baseado em multiplicador do <code>font-size</code>.</p>
 	
-	
-	<figure class="preCode">Correct</figure>
+	<figure class="preCode">Correto</figure>
 	<textarea class="brush:css">
 		#selector {
 			font-size: 13px;
@@ -156,15 +153,14 @@
 		}
 	</textarea>
 	
-	<figure class="preCode">Incorrect</figure>
+	<figure class="preCode">Incorreto</figure>
 	<textarea class="brush:css">
-		/*  Equivalent to 13px font-size and 20px line-height, but only if the browser default text size is 16px. */
+		/*  Equivalente a 13px font-size e 20px line-height, mas apenas se o tamanho padrão de texto do navegador for 16px. */
 		#selector {
 			font-size: 0.813em;
 			line-height: 1.25em;
 		}
 	</textarea>
-	
 	
 	<h3>Internet Explorer Bugs</h3>
 	
