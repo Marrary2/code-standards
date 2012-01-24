@@ -112,7 +112,7 @@
 
 	<p>Navegadores <a href="http://www.w3.org/TR/2009/PR-css3-selectors-20091215/">calculam a especificidade</a> para determinar quais regras do CSS deveriam ser aplicadas. Se dois seletores aplicam para o mesmo elemento, o que tiver com <strong>maior especificidade ganha</strong>.</p>
 
-	<p>IDs tem uma especificidade maior que os seletores de atributo, e seletores de classe têm maior especificidade do que qualquer número de elementos de seleção. Sempre tente usar IDs para aumentar a especificidade. Há momentos em que podemos tentar aplicar uma regra CSS a um elemento e ele não funciona, não importa o que tentamos. Provavelmente porque a especificidade do seletor usado é inferior ao outro e as propriedades do mais alto está tomando precedência sobre aqueles que você deseja aplicar. Isto é mais comum quando se trabalha com uma folha de estilos maior e mais complexa. Geralmente este não é um grande problema quando se trata de projetos menores.</p>
+	<p>IDs tem uma especificidade maior que os seletores de atributo, e seletores de classe têm maior especificidade do que qualquer número de elementos de seleção. Sempre tente usar IDs para aumentar a especificidade. Há momentos em que podemos tentar aplicar uma regra CSS a um elemento e ele não funciona, não importa o que tentamos. Provavelmente porque a especificidade do seletor usado é inferior ao outro e as propriedades do mais alto está tomando precedência sobre aqueles que você deseja aplicar. Isto é mais comum quando se trabalha com uma folha de estilos maior e complexa. Geralmente este não é um grande problema quando se trata de projetos menores.</p>
 	
 	<h5>Calculando especificidade</h5>
 
@@ -149,13 +149,13 @@
 	<textarea class="brush:css">
 		#selector {
 			font-size: 13px;
-			line-height: 1.5;  /*  13 * 1.5 = 19.5 ~ Rounds to 20px. */
+			line-height: 1.5;  /*  13 * 1.5 = 19.5 ~ Arredonde para 20px. */
 		}
 	</textarea>
 	
 	<figure class="preCode">Incorreto</figure>
 	<textarea class="brush:css">
-		/*  Equivalente a 13px font-size e 20px line-height, mas apenas se o tamanho padrão de texto do navegador for 16px. */
+		/*  Equivalente a um font-size de 13px e 20px de line-height, mas apenas se o tamanho padrão de texto do navegador for 16px. */
 		#selector {
 			font-size: 0.813em;
 			line-height: 1.25em;
@@ -163,11 +163,10 @@
 	</textarea>
 	
 	<h3>Internet Explorer Bugs</h3>
+
+	<p>Inevitavelmente, quando todos os outros navegadores parecem funcionar corretamente, qualquer versão do Internet Explorer irá apresentar algum bug absurdo, retardando o tempo de desenvolvimento. Enquanto nós encorajamos a solução de problemas e a construção de um código que irá funcionar em todos navegadores sem modificações especiais, às vezes é necessário usar comentários condicionais <code>if IE</code> como ganchos em nossas folhas de estilos. <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Leia mais em paulirish.com</a>
 	
-	<p>Inevitably, when all other browsers appear to be working correctly, any and all versions of Internet Explorer will introduce a few nonsensical bugs, delaying time to deployment. While we encourage troubleshooting and building code that will work in all browsers without special modifications, sometimes it is necessary to use conditional <code>if IE</code> comments for CSS hooks we can use in our stylesheets. <a href="http://paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/">Read more on paulirish.com</a></p>
-	
-	
-	<figure class="preCode">Fixing IE</figure>
+	<figure class="preCode">Corrigindo o IE</figure>
 	<textarea class="brush:html">
 		<!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
 		<!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
@@ -180,8 +179,8 @@
 		.box { float: left; margin-left: 20px; }
 		.ie6 .box { margin-left: 10px; }
 	</textarea>
-	
-	<p>If you're using HTML5 (and the <a href="#h5bp">HTML5 Boilerplate</a>) we encourage the use of the <a href="http://www.modernizr.com/">Modernizer</a> JavaScript library and this pattern:</p>
+
+	<p>Se você estiver usando HTML5 (e o <a href="#h5bp">HTML5 Boilerplate</a>) nós encorajamos o uso da biblioteca JavaScript <a href="http://www.modernizr.com/">Modernizer</a> e este padrão:
 	 
 	<textarea class="brush:html">
 		<!--[if lt IE 7]> <html class="no-js ie ie6" lang="en"> <![endif]-->
@@ -190,11 +189,12 @@
 		<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
 		<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 	</textarea>
-<h3>Shorthand</h3>
-	
-	<p>In general, CSS shorthand is preferred because of its terseness, and the ability to later go back and add in values that are already present, such as the case with margin and padding. Developers should be aware of the <abbr title="Top Right Bottom Left">TRBL</abbr> acronym, denoting the order in which the sides of an element are defined, in a clock-wise manner: Top, Right, Bottom, Left. If <em>bottom</em> is undefined, it inherits its value from <em>top</em>. Likewise, if <em>left</em> is undefined, it inherits its value from <em>right</em>. If only the <em>top</em> value is defined, all sides inherit from that one declaration.</p>
-	
-	<p class="normalize">For more on reducing stylesheet code redundancy, and using CSS shorthand in general:</p>
+
+	<h3>Abreviação</h3>
+
+	<p>Em geral, é preferido a abreviação do CSS por causa da sua concisão e possibilidade de mais tarde voltar e adicionar em valores que já estão presentes, como é o caso do margin e padding. Desenvolvedores devem estar cientes do acrónimo <abbr title="Top Right Bottom Left">TRBL</abbr>, denotando a ordem em que os lados de um elemento são definidas, em sentido anti-horário: topo, para direita, abaixo e para a esquerda. Se <em>bottom</em> não estiver definido, ele herda o valor do <em>top</em>. Da mesma maneira, se <em>left</em> não for definido, ele herdará o valor do <em>right</em>. Se apenas o valor de <em>top</em> for definido, todos os outros lados herdam o mesmo valor declarado.</p>
+
+	<p class="normalize">Para mais informações sobre como reduzir a redundância de código na folha de estilo, e usando abreviação em geral:</p>
 	
 	<ul>
 		<li><a href="http://qrayg.com/journal/news/css-background-shorthand">http://qrayg.com/journal/news/css-background-shorthand</a></li>
@@ -202,36 +202,36 @@
 		<li><a href="http://dustindiaz.com/css-shorthand">http://dustindiaz.com/css-shorthand</a></li>
 	</ul>
 	
-	<h3>Images</h3>
+	<h3>Imagens</h3>
 	
 	<ul>
-		<li>For repeating images, use <a href="http://www.iandevlin.com/blog/2010/03/webdev/fading-issue-with-repeating-background-transparent-image-in-internet-explorer">something larger than 1x1 pixels</a></li>
-		<li>You should never be using spacer images.</li>
-		<li>Use <a href="#_leverage_css_sprites">CSS sprites generously</a>. They make hover states easy, improve page load time, and reduce carbon dioxide emissions.</li>
+		<li>Para repetir imagens, use <a href="http://www.iandevlin.com/blog/2010/03/webdev/fading-issue-with-repeating-background-transparent-image-in-internet-explorer">algo maior do que 1x1 pixels</a>.</li>
+		<li>Você nunca deve usar imagens para criar espaços em branco.</li>
+		<li>Use <a href="#_leverage_css_sprites">CSS sprites generosamente</a>. Eles tornam o efeito hover mais fácil, melhoram o tempo carregamento da página e reduzem as emissões de dióxido de carbono.</li>
 
-		<li>Typically, all images should be sliced with a transparent background (PNG8). All should be cropped tightly to the image boundaries.
+		<li>Normalmente, todas as imagens devem ser cortadas com um fundo transparente (PNG8). Elas devem ser cortadas bem nos limites da imagem. </li>
 			<ul>
-				<li>However, the logo should always have a background matte and have padding before the crop. (so other people can hotlink to the file)</li>
+				<li>No entanto, o logo sempre deve ter um background matte e padding antes do corte. (para que outras pessoas possam criar um hotlink para o arquivo).</li>
 			</ul>
 		</li>
 	</ul>
 
 	<hr />
 	
-	<h3>General Text and Font Styling</h3>
+	<h3>Estilos gerais de fonte e texto</h3>
 	
-	<h4>Headings</h4>
+	<h4>Títulos</h4>
 	
 	<ul>
-		<li>Define default styling for <code>h1-h6</code> headings including headings as links. It's helpful to declare these at the top of your CSS document, and modify them with as necessary for consistency across the site.</li>
-		<li>Headings should show a hierarchy indicating different levels of importance from the top down starting with h1 having the largest font size.</li>
-		<li>SEO: To get a rough idea of how your page hierarchy is organized and read, use your Developer Toolbar to disable CSS. You'll end up with a text-based view of all your <code>h1-h6</code> tags, <code>strong</code>, <code>em</code>, etc.</li>
+		<li>Definir um estilo padrão para <code>h1-h6</code> títulos, incluindo cabeçalhos com links. É útil declarar estes no topo do seu documento CSS, e modificá-los como for necessário para manter a consistência em todo o site.</li>
+		<li>Cabeçalhos devem mostrar uma hierarquia que indicam diferentes níveis de importância de cima para baixo, começando com <code>h1</code> tendo o maior tamanho de fonte</li>
+		<li>SEO: Para se ter uma ideia aproximada de como a hierarquia da página está organizada e legível, use a barra de ferramentas de desenvolvedor (Developer Toolbar) para desabilitar o CSS. Você vai acabar com uma visão usando apenas texto de todas as suas tags <code>h1-h6</code>, <code>strong</code>, <code>em</code> etc.</li>
 	</ul>
 	
 	<h4>Links</h4>
 	
 	<ul>
-		<li>Default styles for links should be declared and different from the main text styling, and with differing styles for hover state.</li>
+		<li>Estilos padrão para links devem ser declarados e ser diferente do estilo de texto principal, e com diferentes estilos para o estado hover.</li>
 		<li>When styling links with underlines use <code>border-bottom</code> and some padding with <code>text-decoration: none;</code>. This just looks better.</li>
 	</ul>
 
