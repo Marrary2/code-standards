@@ -223,7 +223,7 @@
 	<h4>Títulos</h4>
 	
 	<ul>
-		<li>Definir um estilo padrão para <code>h1-h6</code> títulos, incluindo cabeçalhos com links. É útil declarar estes no topo do seu documento CSS, e modificá-los como for necessário para manter a consistência em todo o site.</li>
+		<li>Definir um estilo padrão para títulos <code>h1-h6</code>, incluindo cabeçalhos com links. É útil declarar estes no topo do seu documento CSS, e modificá-los como for necessário para manter a consistência em todo o site.</li>
 		<li>Cabeçalhos devem mostrar uma hierarquia que indicam diferentes níveis de importância de cima para baixo, começando com <code>h1</code> tendo o maior tamanho de fonte</li>
 		<li>SEO: Para se ter uma ideia aproximada de como a hierarquia da página está organizada e legível, use a barra de ferramentas de desenvolvedor (Developer Toolbar) para desabilitar o CSS. Você vai acabar com uma visão usando apenas texto de todas as suas tags <code>h1-h6</code>, <code>strong</code>, <code>em</code> etc.</li>
 	</ul>
@@ -231,8 +231,8 @@
 	<h4>Links</h4>
 	
 	<ul>
-		<li>Estilos padrão para links devem ser declarados e ser diferente do estilo de texto principal, e com diferentes estilos para o estado hover.</li>
-		<li>When styling links with underlines use <code>border-bottom</code> and some padding with <code>text-decoration: none;</code>. This just looks better.</li>
+		<li>Estilos padrões para links devem ser declarados e ser diferentes do estilo de texto principal, e com diferentes estilos para o estado hover.</li>
+		<li>Quando estilamos links com sublinhados usamos <code>border-bottom</code>, algum padding e <code>text-decoration: none;</code>. Visualmente fica bem melhor.</li>
 	</ul>
 
 	<!-- #### WEB TYPOGRAPHY SECTION #### -->
@@ -245,118 +245,120 @@
 	-----"-"-----"-"-----"-"-----,_
 	=========================== -->
 
-	<h2>Web Typography</h2>
+	<h2>Tipografia Web</h2>
 
-	<p>The use of custom fonts and typefaces on the web has been growing more popular the past few years. with native browser support on the rise and several supporting services and APIs now available there is real momentum in this space. Each of these approaches have their own pros and cons. Before a project kicks off it's best to do research into technology and licensing limitations to choose the proper approach for the specific project.</p>
+	<p>O uso de fontes customizadas e caracteres tipográficos na web tem se tornado muito popular nos últimos anos. Com o suporte nativo do browser em ascensão, vários serviços de apoio e APIs agora disponível, existe real impulso neste espaço. Cada uma dessas abordagens tem suas vantagens e desvantagens. Antes de um projeto começar, é melhor fazer uma pesquisa para saber as limitações tecnológicas e de licenciamento para escolher abordagem apropriada para o projeto em específico.</p>
 
-	<p>All of these approaches have drawbacks in code overhead, development time and performance (clock and perceived). Familiarizing yourself with these issues and communicating them to the other members of the team and to the client will save significant problems later on in the project.</p>
+	<p>Todas essas abordagens tem incovenientes com sobrecarga de código, tempo de desenvolvimento e performance (cronometrada e perceptível). Familiarizar você mesmo com estes problemas, comunicá-los aos outros membros da sua equipe e ao cliente, irá salvá-lo de significantes problemas no projeto mais tarde.</p>
 
-	<p>Listed here are some popular methods of embed custom fonts, list in the order of our preference for implementation.</p>
+	<p>Abaixo alguns métodos populares de incorporar fontes customizadas, listadas em ordem de nossa preferência para a implementação.</p>
 	
 	<h3>@font-face</h3>
-	
-	<p>The <a href="http://www.w3.org/TR/2011/WD-css3-fonts-20110324/#font-face-rule">@font-face at-rule</a> allows you to define custom fonts. It was first defined in the CSS2 specification, but was removed from CSS2.1. Currently, it's a draft recommendation for CSS3.</p>
-	
-	<p>Our first and most preferred choice for customizing fonts on the web is @font-face, simply because it is part of the CSS Fonts Module working draft which means it will continue to grow in popularity as browser support grows, and ease of use for it improves as it becomes more stable.</p>
-	
-	<p>For now, when using <code>@font-face</code> it's recommended to declare the source for each font format. This is important if you want it to work in the most number of browsers, though it is not a requirement for use.</p>
-	
-	<p class="normalize">The font formats included in the specification are:</p>
+
+	<p>A regra <a href="http://www.w3.org/TR/2011/WD-css3-fonts-20110324/#font-face-rule">@font-face</a> permite que você defina fontes customizadas. Ela foi primeiramente lançada nas especificações do CSS2, mas foi removida do CSS2.1. Atualmente, é um projeto de recomendação para o CSS3.</p>
+
+	<p>Nossa primeira e mais preferível escolha para customizar fontes na web é a <code>@font-face</code>, simplesmente porque ele é parte do projeto de trabalho CSS Módulo Fontes, o que significa que continuará a crescer em popularidade com a medida que cresce o suporte ao navegador, e irá melhorar a facilidade de uso, tornando se mais estável.</p>
+
+	<p>Para agora, quando usar <code>@font-face</code>, é recomendado declarar o código fonte para cada formato de fonte. Isso é importante se você precisar trabalhar com um maior número de navegadores, embora não seja obrigatório o uso.</p>
+
+	<p class="normalize">Os formatos de fonte incluem as especificações abaixo:</p>
 	
 	<ul>
-		<li><strong>woff</strong>: WOFF (Web Open Font Format)</li>
+		<li><strong>woff</strong>: WOFF (Fonte Web de Formato Aberto)</li>
+		<li><strong>ttf</strong>: TrueType</li>
 		<li><strong>ttf</strong>: TrueType</li>
 		<li><strong>ttf</strong>, <strong>otf</strong>: OpenType</li>
-		<li><strong>eot</strong>: Embedded OpenType</li>
-		<li><strong>svg</strong>, <strong>svgz</strong>: SVG Font</li>
+		<li><strong>eot</strong>: incorporados OpenType</li>
+		<li><strong>svg</strong>, <strong>svgz</strong>: SVG Fonte</li>
 	</ul>
-	
-	<h4>Bulletproof @font-face</h4>
-	
-	<p>For full cross-browser compatibility use Fontsprings' new <a href="http://www.fontspring.com/blog/further-hardening-of-the-bulletproof-syntax">bulletproof @font-face syntax</a> (<em>latest version as of 2/21/11</em>).</p>
-	
+
+	<h4>@font-face à prova de bala</h4>
+
+	<p>Para uma compatibilidade com todos os browsers use a nova sintaxe do Fontsprings', <a href="http://www.fontspring.com/blog/further-hardening-of-the-bulletproof-syntax">@font-face à prova de bala</a> (<em>última versão de 21/02/11</em>).</p>
+
 	<textarea class="brush:css">
 		@font-face {
 			font-family: 'MyFontFamily';
-			src: url('myfont-webfont.eot'); 					/* IE9 Compat Modes */
+			src: url('myfont-webfont.eot'); 					/* IE9 Modos de Compatibilidade */
 			src: url('myfont-webfont.eot?iefix') format('eot'),	/* IE6-IE8 */
-			   url('myfont-webfont.woff') format('woff'),		/* Modern Browsers */
+			   url('myfont-webfont.woff') format('woff'),		/* Navegadores Modernos */
 			   url('myfont-webfont.ttf') format('truetype'),		/* Safari, Android, iOS */
-			   url('myfont-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+			   url('myfont-webfont.svg#svgFontName') format('svg'); /* Legado iOS */
 			font-weight: <font-weight>;
 			font-style: <font-style>;
 			// etc.
 		}
 	</textarea>
+
+	<p>Aqui uma <a href="http://www.thecssninja.com/demo/css_fontface/">demo funcional</a> usando a última versão.</p>
 	
-	<p>Here's a <a href="http://www.thecssninja.com/demo/css_fontface/">working demo</a> using this version of implementation.</p>
 	
-	<h4>Cross-Browser Compatibility</h4>
+	<h4>Compatibilidade Cross-Browser</h4>
 	
-	<p>Safari, <abbr title="Internet Explorer version 6-9">IE 6-9</abbr>, <abbr title="Internet Explorer Compatibility Modes">IE 9 Compatibility Modes</abbr>, Firefox, Chrome, iOS, Android, Opera</p>
+	<p>Safari, <abbr title="Internet Explorer version 6-9">IE 6-9</abbr>, <abbr title="Internet Explorer Compatibility Modes">IE 9 Modo de Compatibilidade</abbr>, Firefox, Chrome, iOS, Android, Opera.</p>
 	
-	<h4>Prevent Compatibility Mode</h4>
-	
-	<p>Sometimes <abbr title="Internet Explorer">IE</abbr> can have a mind of its own and will switch to compatibility mode without you knowing. Include the following in the site <code>&lt;head&gt;</code> to prevent your site from defaulting to compatibility mode:</p>
-	
+	<h4>Prevenindo o Modo de Compatibilidade</h4>
+
+	<p>Alguns <abbr title="Internet Explorer">IE</abbr> podem ter vontade própria e mudar para o modo de compatibilidade sem você saber. Incluir o seguinte código no cabeçalho do seu site <code>&lt;head&gt;</code> pode evitar que seu site use o modo de compatibilidade como padrão:</p>
+
 	<textarea class="brush:html">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	</textarea>
 	
 	<hr />
 	
-	<h4>Tips for @font-face</h4>
+	<h4>Dicas para o @font-face</h4>
 	
 	<ul>
-		<li>IE 6–8 will only accept a TrueType font packaged as an EOT.</li>
-		<li>font-weight and font-style have different meanings within <code>@font-face</code>. 
-			Declarations where <code>font-weight:bold;</code> means this is the bold version of this typeface, rather than apply bold to this text</li>
-		<li><a href="http://paulirish.com/2010/font-face-gotchas/">@font-face gotchas</a></li>
+		<li>IE 6–8 será apenas será aceito com uma fonte TrueType font empacotada como uma EOT.</li>
+		<li>font-weight e font-style tem diferentes significados com o <code>@font-face</code>. 
+			Declarações como <code>font-weight:bold;</code> significa que esta é a versão em negrito da fonte, ao invés de aplicar o negrito a este texto.</li>
+		<li><a href="http://paulirish.com/2010/font-face-gotchas/">Dicas para @font-face</a></li>
 	</ul>
 	
-	<strong>Pros</strong>
+	<strong>Prós</strong>
 	
 	<ul>
-		<li>Easy to implement</li>
-		<li>Large variety of APIs</li>
-		<li>Customizable</li>
-		<li>Easy to add to elements</li>
-		<li>Nothing required besides CSS</li>
-		<li>Is currently part of the working draft of CSS Fonts Module 3</li>
+		<li>Fácil implementar</li>
+		<li>Larga variedade de APIs</li>
+		<li>Customizável</li>
+		<li>Fácil para adicionar aos elementos</li>
+		<li>Nada requerido além do CSS</li>
+		<li>Atualmente faz parte do projeto de trabalho do Fontes - CSS Módulo 3</li>
 	</ul>
 	
-	<strong>Cons</strong>
+	<strong>Contras</strong>
 	
 	<ul>
-		<li>Limited browser support if used improperly</li>
-		<li>Some older versions of modern browsers (Chrome, Opera) don't always render well. Text can have rough edges. <em>**I have not been able to confirm whether this is still an issue now or not.</em></li>
+		<li>Suporte ao browser limitado, se usado indevidamente</li>
+		<li>Alguns versões antigas versões do navegadores modernos (Chrome, Opera) nem sempre renderizam bem. Textos pode ter arestas. <em>**Eu não fui capaz de confirmar se isto é ainda é um problema ou não.</em></li>
 	</ul>
 	
 	<hr />	
 	
-	<h3>Google WebFonts API &amp; Font Loader</h3>
-	
-	<p>There are two options available with <a href="https://code.google.com/apis/webfonts/">Google Webfonts</a>. Both options have their downsides of course but they can be just as good to use as <code>@font-face</code>, it all depends on a projects needs.</p>
+	<h3>Google WebFonts API &amp; Webfont Loader</h3>
+
+	<p>Há duas opções disponíveis no <a href="https://code.google.com/apis/webfonts/">Google Webfonts</a>. Ambas as opções têm suas desvantagens, claro, mas eles podem ser tão boas como o <code>@font-face</code>, e isso depende da necessidade do seu projeto.</p>
 	
 	<h4>Webfonts API</h4>
-	
-	<p><a href="https://code.google.com/apis/webfonts/docs/getting_started.html">Google's Webfonts API</a> essentially does the same thing as <code>@font-face</code>, it just does all the hard work for you, providing wider browser support.The major drawback to this method is the very small font library it uses. To make it work all you need to do is include the stylesheet + the font name.</p>
+
+	<p><a href="https://code.google.com/apis/webfonts/docs/getting_started.html">Google's Webfonts API</a> essencialmente faz a mesma coisa que o <code>@font-face</code>, ele apenas faz todo o trabalho chato para você, provendo suporte mais amplo aos navegadores. A principal desvantagem deste método é a pequena biblioteca de fontes que ele possuí. Para fazê-los funcionar tudo que você precisa fazer é incluir a folha de estilo + o nome da fonte.</p>
 	
 	<textarea class="brush:html">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Font+Name">
 	</textarea>
 	
-	<p class="normalize">Then define a style for the selector you want to apply the font to:</p>
+	<p class="normalize">Em seguida, defina um estilo para o seletor que você precisa aplicar a fonte:</p>
 	
 	<textarea class="brush:css">
-		CSS selector {
-			font-family: 'Font Name', serif;
+		seletor CSS {
+			font-family: 'Nome da Fonte', serif;
 		}
 	</textarea>
 	
 	<h3>Webfont Loader</h3>
-	
-	<p>Another option Google offers is the <a href="https://code.google.com/apis/webfonts/docs/webfont_loader.html">Webfont Loader</a> which is a JavaScript library that allows for more control than the font API does. You can also use multiple webfont providers like Typekit. To use it include the script in your page:</p>
+
+	<p>Outra opção que o Google oferece é o <a href="https://code.google.com/apis/webfonts/docs/webfont_loader.html">Webfont Loader</a> que é uma biblioteca JavaScript que permite maior controle do que a API fonte faz. Você também pode usar vários provedores webfonts como Typekit. Para usá-la, inclua o seguinte script na sua página:</p>
 	
 	<textarea class="brush:javascript">
 		<script type="text/javascript">
@@ -372,8 +374,8 @@
 			})();
 		</script>
 	</textarea>
-	
-	<p class="normalize">Including the webfont.js file this way is faster if not already using the Ajax APIs. Otherwise you should use this:</p>
+
+	<p class="normalize">A maneira mais rápida se você não estiver usando a APIs Ajax é incluir o arquivo webfont.js. Caso ao contrário, você deve usar isto:</p>
 	
 	<textarea class="brush:javascript">
 		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -384,31 +386,33 @@
 			});
 		</script>
 	</textarea>
+
+	<p>Com o uso do Webfont Loader você tem maior capacidade para customização, incluindo o uso de mais fontes, não apenas as encontradas na biblioteca Google Webfont, que não é muito vasta. Entretanto, exige que você carregue JavaScript, sacrificando uma coisa por outra.</p>
 	
-	<p>By using the Webfont Loader you have more ability to customize things including the use of more fonts, not just those in the Google Webfont library which is not large. However, it then requires you to load JavaScript, sacrificing one thing for another.</p>
-	
-	<strong>Pros</strong>
+	<strong>Prós</strong>
 	
 	<ul>
-		<li>Very easy to implement</li>
-		<li>Wide browser support</li>
-		<li>Can be combined with Typekit</li>
-		<li>Customizable when using the font loader</li>
-		<li>API does the same thing as <code>@font-face</code></li>
+		<li>Muito fácil de se implementar</li>
+		<li>Alto suporte dos navegadores</li>
+		<li>Pode ser combinada com o Typekit</li>
+		<li>Customizável quando usada com o font loader</li>
+		<li>API faz a mesma coisa que o <code>@font-face</code></li>
 	</ul>
 	
-	<strong>Cons</strong>
+	<strong>Contras</strong>
 	
 	<ul>
-		<li>Very small font library if using the font API</li>
-		<li>Using the Webfont Loader requires the use of JavaScript to work</li>
-		<li>Most browsers will load the rest of the page first, leaving a blank space where the text would be, or otherwise show the fallback option if one exists, until the page fully loads.</li>
-		<li>Some fonts in the webfont library render poorly on Windows</li>
+		<li>Biblioteca pequena de fontes quando se usa a API font</li>
+		<li>Usando o Webfont Loader é necessário o uso de JavaScript para que funcione</li>
+		<li>A maioria dos navegadores carregam primeiro o restante da página, deixando um espaço em branco onde o texto deveria aparecer, ou dão algum recurso alternativo, se houver, só quando a página carregou totalmente.</li>
+		<li>Algumas fontes na biblioteca webfonts renderizam de pobremente no Windows</li>
 	</ul>
 	
 	<hr />
 	
 	<h3>Cufon</h3>
+
+	<p>Se você escolher usar o Cufon, é altamente recomendado que você utilize a <a href="http://cufon.shoqolate.com/js/cufon-yui.js">versão comprimida do Cufon</a>
 	
 	<p>If you choose to use Cufon, it is highly recommended you use the <a href="http://cufon.shoqolate.com/js/cufon-yui.js">Cufon compressed version</a>. You will need to convert your font using the <a href="http://cufon.shoqolate.com/generate/">generator</a>.</p>
 	
