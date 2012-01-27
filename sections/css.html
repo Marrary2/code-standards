@@ -310,7 +310,7 @@
 	<h4>Dicas para o @font-face</h4>
 	
 	<ul>
-		<li>IE 6–8 será apenas será aceito com uma fonte TrueType font empacotada como uma EOT.</li>
+		<li>IE 6–8 será apenas será aceito com uma fonte TrueType empacotada como uma EOT.</li>
 		<li>font-weight e font-style tem diferentes significados com o <code>@font-face</code>. 
 			Declarações como <code>font-weight:bold;</code> significa que esta é a versão em negrito da fonte, ao invés de aplicar o negrito a este texto.</li>
 		<li><a href="http://paulirish.com/2010/font-face-gotchas/">Dicas para @font-face</a></li>
@@ -412,7 +412,7 @@
 	
 	<h3>Cufon</h3>
 
-	<p>Se você escolher usar o Cufon, é altamente recomendado que você utilize a <a href="http://cufon.shoqolate.com/js/cufon-yui.js">versão comprimida do Cufon</a>
+	<p>Se você escolher usar o Cufon, é altamente recomendado que você utilize a <a href="http://cufon.shoqolate.com/js/cufon-yui.js">versão comprimida do Cufon</a>. Você precisará converter sua fonte usando o <a href="http://cufon.shoqolate.com/generate/">gerador</a>.</p>
 	
 	<p>If you choose to use Cufon, it is highly recommended you use the <a href="http://cufon.shoqolate.com/js/cufon-yui.js">Cufon compressed version</a>. You will need to convert your font using the <a href="http://cufon.shoqolate.com/generate/">generator</a>.</p>
 	
@@ -424,92 +424,96 @@
 			Cufon.replace('#sub1'); 	// Requires a selector engine for IE 6-7
 		</script>
 	</textarea>
+
+	<p>Nós recomendamos o uso do Cufon com moderação pois pode causar problemas de desempenho se aplicado a uma grande quantidade de texto. Para mais informações visite o <a href="https://github.com/sorccu/cufon/wiki/">Wiki do Cufon</a>.</p>
 	
-	<p>We recommend using Cufon sparingly since it can cause a lot of overhead if applied to a large amount of text. For more info visit the <a href="https://github.com/sorccu/cufon/wiki/">Cufon Wiki</a>.</p>
-	
-	
-	<strong>Pros</strong>
+	<strong>Prós</strong>
 	
 	<ul>
-		<li>Wide browser support</li>
-		<li>Renders well in supported browsers</li>
-		<li>Customizable</li>
-		<li>Easy to implement</li>
+		<li>Largo suporte dos navegadores</li>
+		<li>Renderiza bem nos navegadores suportados</li>
+		<li>Customizável</li>
+		<li>Fácil de implementar</li>
 	</ul>
 	
 	
-	<strong>Cons</strong>
+	<strong>Contras</strong>
 	
 	<ul>
-		<li>Requires use of JS to work</li>
-		<li>Text can't be selected that uses it</li>
-		<li>Not all characters can be used</li>
-		<li>Customization can be a pain</li>
-		<li>Not always easy to apply to multiple elements, especially when adding effects like hovers</li>
+		<li>Requer o uso de JS para funcionar</li>
+		<li>O texto não pode ser selecionado quando o usamos</li>
+		<li>Nem todos caracteres podem ser usados</li>
+		<li>Customização pode ser dolorosa</li>
+		<li>Nem sempre é fácil de se aplicar a múltiplos elementos, especialmente quando adicionamos efeitos como hovers</li>
 	</ul>
 	
 	<hr />
 	
 	<h3>Typekit</h3>
+
+	<p>Usar o <a href="https://typekit.com">Typekit</a> tem suas vantagens e não deve ser totalmente descartado quando escolher o método a utilizar para adição de fontes personalizadas para um site. É uma forte plataforma integrada, escalável e popular. Ele pode ser usado com o Google Webfonts e é fácil adicionar ao Wordpress, Posterous, Typepad, e outros CMS similares.</p>
+
+	<p>No entanto, o uso completo do <a href="https://typekit.com/plans">Typekit não vem sem um custo</a>. Se você precisa usá-lo em um ou mais 2 sites ou o site tem um alto volume de pageviews você terá que pagar um valor anual de $49.99, e se seu site tiver mais de um milhão de pageviews o custo será o dobro. Porém, você provavelmente tem o dinheiro para cobrir o custo, se você tiver mais de um milhão de pageviews. Se não, então você precisará repensar seu modelo de negócio.</p>
 	
-	<p>Using <a href="https://typekit.com">Typekit</a> has its advantages and shouldn't be completely disregarded when choosing which method to use for adding custom fonts to a web site. It has strong platform integration and is a scalable and popular service. It can be used with Google Webfonts and is easily added to WordPress, Posterous, Typepad, and other similar CMS powered sites.</p>
-	
-	<p>However, full use of <a href="https://typekit.com/plans">Typekit doesn't come without a cost</a>. If you need to use it on more than 2 sites or on a site that gets a high amount of pageviews you will need to pay an annual cost of $49.99, and for sites with a million+ pageviews it costs twice as much. Though, you probably have the money to cover the cost if you're getting over a million pageviews. If not then you may want to rethink your business model.</p>
-	
-	
-	<strong>Pros</strong>
+	<strong>Prós</strong>
 	
 	<ul>
-		<li>Large font library, including Adobe fonts</li>
-		<li>Easy implementation</li>
-		<li>Google Webfont API and blogging platform integration</li>
-		<li>Free plan has limits but doesn't expire</li>
+		<li>Vasta biblioteca de fontes, incluindo fontes Adobe</li>
+		<li>Fácil implementação</li>
+		<li>Google Webfont API e integração com plataforma de blogs</li>
+		<li>Plano gratuito tem um limite, mas não expira</li>
 	</ul>
 	
 	
-	<strong>Cons</strong>
+	<strong>Contras</strong>
 	
 	<ul>
-		<li>Requires JavaScript to use</li>
-		<li>Limited font library access without paying</li>
-		<li>Free and cheapest plans only allow use on 1-2 web sites and 2-5 fonts per site</li>
-		<li>You have to pay to use it on more than 1 site</li>
+		<li>Requer JavaScript para funcionar</li>
+		<li>Limitado acesso a biblioteca de fontes não pagas</li>
+		<li>Planos gratuitos e baratos só permitem usar 1-2 sites e 2-5 fontes por site</li>
+		<li>Você tem que pagar para usá-los em mais de 1 site</li>
 	</ul>
 	
 	<hr />
 	
 	<h3>Scalable Inman Flash Replacement (sIFR)</h3>
+
+	<h3>Substituição de Flash Inman Escalável (sIFR)</h3>
+
+	<p>Nós não recomendamos que você utilize este método por causa de como amplamente utilizado se sentiu que não era necessário incluir que você pudesse tomar a decisão correta, escolhendo qual método usar para fontes personalizadas.
 	
-	<p>We do not recommend that you use this method but because of how widely used it is we felt it was necessary to include so you could make a properly informed decision when choosing which method to go with for customized webfonts.</p>
+	<!--<p>We do not recommend that you use this method but because of how widely used it is we felt it was necessary to include so you could make a properly informed decision when choosing which method to go with for customized webfonts.</p>-->
+
+	<p>Apesar de ser popular entre web designers, e ter um bom suporte na maioria dos navegadores, as desvantagens dele não compensam o uso. A grande e mais óbvia razão de se não usar sIFR é porque ela utiliza Flash. E mais, para o Flash funcionar corretamente, ele necessita de Javascript e os scripts devem ser carregados antes do texto que você usou e isto é visível na página. Sem contar, que ele aumenta o tempo de carregamento da página e pode deixar um site lento ainda mais lento.</p>
+
+	<p class="normalize">Nós vamos deixar você fazer a matemática aqui.</p>
 	
-	<p>Despite its wide popularity among web designers, and its decent support in most browsers, the drawbacks to its use outweigh its convenience. The biggest and most obvious reason to not use sIFR is the fact that it uses Flash. Plus, in order for the Flash to even work, it requires JavaScript and the scripts must be loaded before the text you use it on is visible on the page. Not to mention that it increases page load time, and can cause a slow site to be even slower.</p>
-	
-	<p class="normalize">We'll let you do the math here.</p>
-	
-	<strong>Pros</strong>
+	<strong>Prós</strong>
 	
 	<ul>
-		<li>Text can be selected</li>
-		<li>Support on most browsers</li>
-		<li>Renders okay on supported browsers</li>
+		<li>Texto pode ser selecionado</li>
+		<li>Suporte na maioria dos navegadores</li>
+		<li>A renderização funciona razoavelmente nos navegadores suportados</li>
 	</ul>
 	
 	
-	<strong>Cons</strong>
+	<strong>Contras</strong>
 	
 	<ul>
-		<li>It uses Flash</li>
-		<li>Requires JavaScript for the Flash to work</li>
-		<li>It's Flash!</li>
-		<li>Text doesn't appear until the scripts load</li>
-		<li>...and it's Flash...</li>
+		<li>Ele usa Flash</li>
+		<li>Requer JavaScript para que o Flash funcione</li>
+		<li>É em Flash!</li>
+		<li>Texto não aparece até que que se carregue os scripts</li>
+		<li>...e é Flash...</li>
 	</ul>
 	
 	<hr />
 	
 	
-	<h3>Font Licensing</h3>
+	<h3>Licenciamento de Fontes</h3>
 	
+	<p>Mesmo que você possa praticamente transformar qualquer fonte em um arquivo de fonte web, você deve se certificar de que está legalmente correto para você fazê-lo. Muitas fundições tem atualizado suas condiçõs para especificar como suas fontes podem ser usadas na web. Veja <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=UNESCO_Font_Lic">Licenciamento de Fonte e detalhes relativos a sua proteção</a> para mais informações.</p>
+
 	<p>Even though you can transform just about any font into a web font file, you should still make sure it is legally okay for you to do so. Many foundries have updated their conditions to specify how their fonts can be used on the web. View <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=UNESCO_Font_Lic">Font Licensing and Protection Details</a> for more information.</p>
 	
 	<hr />
