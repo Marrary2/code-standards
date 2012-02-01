@@ -172,9 +172,7 @@
 
 	<p>Script.js serve para conter o código da sua aplicação ou site. Novamente, esta não é sempre a melhor solução no caso de equipes maiores. Projetos grandes e ricos em recursos podem acabar dividindo o código do aplicativo em módulos ou recursos em arquivos específicos. Para sites pequenos, aplicações simples ou protótipo inicial, deixe seu trabalho em scripts.js para fazer mais sentido.</p>
 
-	<p>Um exemplo simplificado, usando o <a href='http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/'>Marcação discreta abrangente baseada em DOM pronta para execução</a> padrão, poderia ser algo como o seguinte:</p>
-	
-	<p>A simplified example, using the <a href='http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/'>Markup-based unobtrusive comprehensive DOM-ready execution</a> pattern, might look something like the following:</p>
+	<p>Um exemplo simplificado, usando o padrão da <a href='http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/'>marcação discreta abrangente baseada em DOM pronta pra execução</a>, poderia ser algo como segue abaixo:</p>
 
 	<textarea class="brush:js">     
 	/* Name: Demo
@@ -214,19 +212,20 @@
 	</textarea>
 
 	
-	<h2>Variables, ID &amp; Class</h2>
-	
-	<p>All JavaScript variables shall be written in either completely lowercase letter or camelCase. The one exception to this are Constructor functions, which are capitalized by tradition. All <code>id</code> and <code>class</code> declarations in CSS shall be written in only lowercase. Neither dashes nor underscores shall be used. </p>
-	
-	
-	<h3>Event Delegation</h3>
-	
-	<p>When assigning unobtrusive event listeners, it is typically acceptable to assign the event listener directly to the element(s) which will trigger some resulting action. However, occasionally there may be multiple elements which match the criteria for which you are checking, and attaching event listeners to each one might negatively impact performance. In such cases you should use event delegation instead.</p>
-	
-	<p>jQuery's <a href="http://api.jquery.com/delegate">delegate()</a> is preferred over <a href="http://api.jquery.com/live">live()</a> for performance reasons.</p>
+	<h2>Variáveis. ID &amp; Classes</h2>
+
+	<p>Todas as variáveis JavaScript devem ser escritas apenas com minúsculas ou camelCase. A única exceção para este caso é se estiver criando Constructor Functions, quais são capitalizados por tradição. Todo <code>id</code> e declarações <code>class</code> em CSS devem ser escritas usando apenas minúsculas. Nem traços, nem sublinhados devem ser utilizados.</p>
 	
 	
-	<h3>Debugging</h3>
+	<h3>Delegação de Eventos</h3>
+
+	<p>Ao atribuir ouvintes de eventos discretos, normalmente é aceitável atribuir diretamente para os elementos que irão disparar alguma ação resultante. Embora, ocasionalmente pode haver vários elementos que correspondam aos critérios para o qual você está verificando, e anexando ouvintes de eventos para cada um deles, isso pode afetar negativamente o desempenho. Nesses casos, você deve usar a delegação de evento ao invés disso.</p>
+	
+	<p>jQuery's <a href="http://api.jquery.com/delegate">delegate()</a> é preferível a <a href="http://api.jquery.com/live">live()</a> por questões de performance.</p>
+	
+	<h3>Debugando</h3>
+
+	<p>Mesmo com os melhores validadores, inevitavelmente algumas peculiaridades do navegador irão causar problemas. Aqui algumas boas  ferramentas que irão te auxiliar a refinar a integridade do seu código ou velocidade de carregamento. É importante que você tenha todas essas ferramentas disponíveis com você, apesar do navegador primário que você usa para desenvolvimento. Nós recomendamos desenvolver primeiramente para Firefox e Safari, então Google Chrome e Opera e adicionando tweaks com comentários condicionais apenas para o Internet Explorer. A lista a seguir possuí vários depuradores úteis e analisadores de velocidade... </p>
 	
 	<p>Even with the best of validators, inevitably browser quirks will cause issues. There are several invaluable tools which will help to refine code integrity and loading speed. It is important that you have all of these tools available to you, despite the browser you primarily use for development. We recommend developing for Firefox and Safari first, then Google Chrome and Opera, with additional tweaks via conditional comments just for Internet Explorer. The following is a list of helpful debuggers and speed analyzers...</p>
 	
@@ -240,25 +239,25 @@
 	</ul>
 	
 
-	<h3>Patterns for better JavaScript</h3>
+	<h3>Padrões para um melhor JavaScript</h3>
 
 	<ul>
-		<li>Writing Maintainable Code</li>
-		<li>Single var Pattern</li>
+		<li>Escreva um código de fácil manutenção</li>
+		<li>Padrão único para var</li>
 		<li>Hoisting: A Problem with Scattered vars</li>
 		<li>(Not) Augmenting Built-in Prototypes</li>
 		<li>Avoiding Implied Typecasting</li>
-		<li>Avoiding eval()</li>
-		<li>Number Conversions with parseInt()</li>
+		<li>Evite eval()</li>
+		<li>Converta número com parseInt()</li>
 		<li>Opening Brace Location</li>
-		<li>Capitalizing Constructors</li>
-		<li>Writing Comments</li>
-		<li>Avoid void</li>
-		<li>Avoid with Statement</li>
-		<li>Avoid continue Statement</li>
-		<li>Avoid Bitwise Operators if possible</li>
+		<li>Capitalize Constructors</li>
+		<li>Escreva Comentários</li>
+		<li>Evite void</li>
+		<li>Evite with Statement</li>
+		<li>Evite continue Statement</li>
+		<li>Evite Bitwise Operators if possible</li>
 	</ul>
 	
-	<p>Stoyan Stefanov covers these and more <a href="http://net.tutsplus.com/tutorials/javascript-ajax/the-essentials-of-writing-high-quality-javascript/">in detail here</a>.</p>
+	<p>Stoyan Stefanov fala sobre esses e  <a href="http://net.tutsplus.com/tutorials/javascript-ajax/the-essentials-of-writing-high-quality-javascript/">mais detalhes aqui</a>.</p>
 	
 </section>
