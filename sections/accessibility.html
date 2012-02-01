@@ -5,26 +5,27 @@
 	<div class="intro has-icon">
 		<img class="icon" src="img/layout/icon-curly.png" alt="{}" />
 
-		<h1>Accessibility</h1>
+		<h1>Acessibilidade</h1>
+
+		<p>Este é um assunto bastante amplo, aquele que está separado de tudo do que se passa dentro de um site. <a href="http://www.w3.org/WAI/" target="_blank">Acessibilidade</a> tem haver com tudo, de como o conteúdo é escrito para a estruturação da marcação HTML, aparência e estilo, a melhoria progressiva e a degradação suave, como o significado semântido do seu código e como ele é lido pelos navegadores.</p>
 		
-		<p>This is a rather broad subject, one that is apart of everything that goes into a web site. <a href="http://www.w3.org/WAI/" target="_blank">Accessibility</a> has to do with everything from how content is written to the structure of HTML markup, appearance and styling, progressive enhancement and graceful degradation, plus how semantic and meaningful your code is when it is read by browsers.</p>	
 	</div>
 
-	<p>We bring people and brands together, like never before. It is important that we reach as many people possible to provide new and exciting 'like never before' experiences. Some areas to consider for better accessibility during the development of any project are:</p>
+	<p>Nós trazemos pessoas e marcas em conjunto, como nunca antes visto. E mais importante que alcançar tantas pessoas possível, fornecer novas e emocionantes experiências "nunca vistas antes". Algumas áreas para se considerar uma boa acesssibilidade durante o desenvolvimento de qualquer projeto são:</p>
 
 	<ul>
-		<li>Markup and semantics</li>
-		<li>Usability of the interface, via keyboard and with JS disabled</li>
-		<li>Correct usage of tags, attributes and descriptions</li>
-		<li>Text content for all non-text content</li>
-		<li>Summary content for screen-readers</li>
+		<li>Marcação e semântica</li>
+		<li>Usabilidade da interface, pelo teclado e com o JavaScript desabilitado</li>
+		<li>Correto usado das tags, atributos e descrições</li>
+		<li>Conteúdo em texto para todo o conteúdo não-texto</li>
+		<li>Resumo do conteúdo para leitores de tela (screen-readers)</li>
 	</ul>
 
-	<p>These areas are all closely related so it can be easier to break them down based on project types. Here are some things that should be done to achieve an accessible web page:</p>
+	<p>Estas áreas são todas estreitamente relacionadas para que possa ser mais fácil discriminá-las com base em tipos de projeto. Aqui algumas coisas que devem ser feitas para alcançar uma página web acessível:</p>
 	
-	<h3>Skip Navigation</h3>
+	<h3>Pular Navegação</h3>
 
-	<p>If your site has navigation elements before the main content, provide a "Skip to main content" link for screen readers. This is a link that is usually hidden using CSS, but will be available to a screen reader to jump past the navigation and go straight to the content. Sometimes it can be helpful to include a skip link to the footer or sitemap.</p>
+	<p>Se o seu site poussí elementos de navegação antes do conteúdo principal, providencie um link para "Pular para o conteúdo principal" para leitores de tela (screen readers). Este é um link que é normalmente escondido usando CSS, mas será mostrado usando um leitor de tela para saltar passando a navegação e ir direto pro conteúdo.</p>
 	
 	<textarea class="brush:css">
 	.skipnav { text-align: left; }
@@ -47,12 +48,14 @@
 	
 	<textarea class="brush:html">
 		<div class="skipnav">
-			<a href="#maincontent">Skip to main content</a>
-			<a href="#sitemap">Skip to footer site map</a>
+			<a href="#maincontent">Pular para o conteúdo principal</a>
+			<a href="#sitemap">Pular para o mapa do site do rodapé</a>
 		</div>
 	</textarea>
 
 	<h3>Tab Index</h3>
+
+	<p>O índice guia de um documento começa com o primeiro link do documento e funciona através de todos eles na ordem de origem até o fim. Este é frequentemente inutilizável e não intuitivo da forma que os elementos aparecem na tela.</p>
 
 	<p>The tab index of a document starts with the first link in the document and works through them all in the source order until the end. This is often unusable and counter-intuitive to how elements appear on screen. So ensure that the tabbing order of links and active elements is logical, by using the <code>tabindex</code> attribute. Form elements should be tabbed through in the order a user expects to complete it, not necessarily in the order of the tags in the HTML.</p>
 
