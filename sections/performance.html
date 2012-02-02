@@ -6,24 +6,22 @@
 		<img class="icon" src="img/layout/icon-curly.png" alt="{}" />
 		
 		<h1>Performance</h1>
-		<p>As we continue to push the limits of what the web can do, it remains just as important a web page can be used with minimal effort or wait time. The following section explains how web pages can be optimized to keep all audiences happy.</p>
+
+		<p>Enquanto nós continuamos a empurrar os limites do que é possível fazer na web, continua sendo importante que uma página da web deve ser usada com o mínimo de esforço ou tempo de espera. A seguir algumas explicações sobre como páginas web podem ser otimizadas para continuar a deixar todos os públicos felizes.</p>
 	</div>
 	
-	
-	<h3>Optimize Delivery of CSS and JavaScript</h3>
-	
-	<p>There are many optimizations that should be done for serving CSS and javascript in Production:</p>
+	<h3>Otimizar Entrega do CSS e JavaScript</h3>
+
+	<p>Segue algumas otimizações que devem ser feitas para servir CSS e JavaScript em produção:</p>
 	
 	<ul>
-		<li>Follow the <a href="http://developer.yahoo.com/performance/">Yahoo Performance Guidelines</a></li>
-		<li>Smush images using <a href="http://developer.yahoo.com/yslow/smushit/">smush.it</a>. Also using <a href="http://developer.yahoo.com/yslow/">YSlow</a> can autosmush all your images for you.</li>
-		
-		<li>Set caching headers appropriately.</li>
-		<li>Consider a cookie-less subdomain for static assets</li>
-		<li>Avoid inline &lt;script&gt; blocks.</li>
-		
-		<li>CSS should be located in the <code>&lt;head></code> of the document, Javascript should be right before the <code>&lt;/body></code> tag.</li>
-		<li>Both CSS and JavaScript should be served minified. Most people use the <a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a> for this.</li>
+		<li>Seguir as diretrizes de performances do <a href="http://developer.yahoo.com/performance/">Yahoo</a>
+		<li>Reduza imagens usando o <a href="http://developer.yahoo.com/yslow/smushit/">smush.it</a>. Também use o <a href="http://developer.yahoo.com/yslow/">YSlow</a> que reduz automaticamente todas as imagens para você.</li>
+		<li>Configure o cache dos cabeçalhos apropriadamente.</li>
+		<li>Considere um subdomínio sem cookies para static assets</li>
+		<li>Evite blocos em linha de &lt;script&gt;.</li>
+		<li>CSS deve estar localizado no <code>&lt;head></code> do documento, JavaScript deve estar logo antes da tag <code>&lt;/body></code>.</li>'
+		<li>CSS e JavaScript devem estar minificados no lado do servidor. A maioria das pessoas usam o <a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a> para isso.</li>
 	
 		<li>Both should be <a href="http://code.google.com/speed/page-speed/docs/payload.html#GzipCompression">served using gzip on the wire</a></li>
 		<li>CSS should be concatenated together. Obviously this can only be done for files that share the same media type (e.g. screen or print). The general goal here is to reduce the number of HTTP connections to dependencies during the loading of the page.</li>
