@@ -25,7 +25,7 @@
 	
 	<h3>Pular Navegação</h3>
 
-	<p>Se o seu site poussí elementos de navegação antes do conteúdo principal, providencie um link para "Pular para o conteúdo principal" para leitores de tela (screen readers). Este é um link que é normalmente escondido usando CSS, mas será mostrado usando um leitor de tela para saltar passando a navegação e ir direto pro conteúdo.</p>
+	<p>Se o seu site possuí elementos de navegação antes do conteúdo principal, providencie um link para "Pular para o conteúdo principal" para leitores de tela. Este é um link que é normalmente escondido usando CSS, mas será mostrado usando um leitor de tela para saltar passando a navegação e ir direto pro conteúdo.</p>
 	
 	<textarea class="brush:css">
 	.skipnav { text-align: left; }
@@ -55,31 +55,27 @@
 
 	<h3>Tab Index</h3>
 
-	<p>O índice guia de um documento começa com o primeiro link do documento e funciona através de todos eles na ordem de origem até o fim. Este é frequentemente inutilizável e não intuitivo da forma que os elementos aparecem na tela.</p>
+	<p>O índice-guia de um documento começa com o primeiro link do documento e funciona através de todos eles na ordem de origem até o fim. Este é frequentemente inutilizável e não intuitivo na forma que os elementos aparecem na tela. Se assegure que a ordem de tabulação dos links e elementos ativos é lógica, usando o atributo <code>tabindex</code>. Elementos de formulário devem ser tabulados através da ordem que um usuário espera concluí-lo, não necessariamente na ordem das tags em HTML.</p>
 
-	<p>The tab index of a document starts with the first link in the document and works through them all in the source order until the end. This is often unusable and counter-intuitive to how elements appear on screen. So ensure that the tabbing order of links and active elements is logical, by using the <code>tabindex</code> attribute. Form elements should be tabbed through in the order a user expects to complete it, not necessarily in the order of the tags in the HTML.</p>
+	<h3>Siglas/Abreviações</h3>
 
-	<h3>Acronyms/Abbreviations</h3>
+	<p>Se o seu conteúdo usa abreviações ou siglas, elas devem ser expandidas usando as tags <code>abbr</code> e <code>acronym</code>.
 
-	<p>If your content uses abbreviations or acronyms, they must be expanded using <code>abbr</code> and <code>acronym</code> tags/
+	<h3>Imagens</h3>
 	
-	<h3>Images.</h3>
-	
-	<p></p>
+	<p>Todas as imagens devem ter o atributo <code>alt</code>. Atributos <code>alt</code> dão significado e descrevem o conteúdo da imagem. Se a imagem é puramente decorativa, atributos <code>alt</code> devem ser marcados em branco usando <code>alt=""</code>. Não coloque algo como <code>alt="Esta imagem é apenas decorativa"</code>, como será lido por leitores de tela, será irritante para o usuário.</p>
 
-	<p>All images must have an <code>alt</code> attribute. Alt attributes should be meaningful and describe the contents of the picture. If the image is purely decorative, alt attributes should be marked as empty using <code>alt=""</code>. Don't put something like <code>alt="This image is for decoration only"</code> as it will be read by the screen-reader and is really annoying.</p>
-	
-	<p>Do not use images for spacing or other similar effects. This should be done using CSS.</p>
+	<p>Não use imagens para criar espaços ou outros efeitos similares. Isso pode ser feito apenas com CSS.</p>
 
-	<h3>Flash and Image Replacement</h3>
+	<h3>Flash e Substituição de Imagem</h3>
 
-	<p>Always use backup HTML content for flash. All promo images should use CSS-based image replacement instead of alt tags.</p>
+	<p>Sempre use conteúdo HTML de backup para flash. Todas as promo imagens devem usar CSS baseado em substituição de imagem em vez de tags <code>alt</code>. </p>
 
-	<figure class="preCode">Fallback non-flash version:</figure>
+	<figure class="preCode">Fallback para versões sem flash:</figure>
 	<textarea class="brush:html">
 		<a href="/nike/morethanagame/" id="morethan">
-		  <h4>Nike: More Than A Game</h4>
-		  <h5>Experience the movement and view apparel</h5>
+		  <h4>Nike: Mais que um jogo</h4>
+		  <h5>Experimentar o movimento e visão de vestuário</h5>
 		</a>
 	</textarea>
 	
@@ -88,43 +84,45 @@
 		a#morethan { background:url(/promos/nikegame.jpg) no-repeat; width: 200px; height: 100px;
 					 text-indent: -999px; overflow:hidden; display:block; }
 	</textarea>
+
+	<p>Ter um fallback para flash e imagens também irá ajudar o SEO.</p>
 	
-	<p>Having a fallback for flash and images will also improve SEO.</p>
-	
-	<h3>Tables</h3>
+	<h3>Tabelas</h3>
+
+	<p>Tabelas devem ser usadas apenas para dados tabulares. Ele não deve ser usado com propósitos de apresetnação ou de layout. Quando usamos tabelas:</p>
 
 	<p>Tables should be used purely for tabular data. They should not be used for presentational or layout purposes. When using tables:</p>
 
 	<ul>
-		<li>Use the <code>th</code> element for table headers. If the headers themselves are abbreviated, use the <code>abbr</code> attribute to expand them.</li>
-		<li>For complex tables, use the <code>scope</code> attribute on table headers to indicate what they pertain to.</li>
+		<li>Use o elemento <code>th</code> para o cabeçalho da tabela. Se o cabeçalho tiver abreviações, use o atributo <code>abbr</code> para expandi-las.</li>
+		<li>Para tabelas complexas, use o atributo <code>scope</code> nos cabeçalhos da tabela para indicar a quem elas dizem a respeito.</li>
 	</ul>
 
-	<h3>Color</h3>
+	<h3>Cores</h3>
 
-	<p>Use of color should fulfill the following:</p>
+	<p>Uso de cores deve cumprir o seguinte:</p>
 
 	<ul>
-		<li>Text should be readable with high contrast. Either use a light background with dark text or vice-versa. Very light text on a light background is virtually impossible to read for most people, it can be even worse for those with color-blindness.</li>
-		<li>Do not use red and green together to make distinctions between key functionality - a small percentage of people will not be able to perceive the distinction.</li>
+		<li>Texto deve dar leitura com alto contraste. Ou use um fundo claro com um texto escuro ou vice-versa. Um texto muito claro com um fundo claro é praticamente impossível de se ler para a maioria das pessoas, e pode ser ainda pior para quem é daltônico.</li>
+		<li>Não use vermelho e verde juntos para fazer distinções entre funcionalidades chaves - uma porcentagem de pessoas não serão capazes de  distinguir-los.</li>
 	</ul>
-	
-	<p>The <a href="http://www.w3.org/WAI/ER/existingtools.html" target="_blank">WAI site contains a list of color-blindness tools</a> that let you see sites as people with different types of colorblindness would.</p>
+
+	<p>O site <a href="http://www.w3.org/WAI/ER/existingtools.html" target="_blank">WAI contêm uma lista de ferramentas focadas para usuários com daltonismo</a>, algumas que lhe permitem ver o site como as pessoas com diferentes tipos de daltonismo.</p>
 
 	<h3>JavaScript</h3>
 
-	<p>Pages should still be functional with JavaScript disabled. Applications should degrade gracefully, or when possible make use of <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">cross-browser polyfills</a> to add functionality to older browsers to enable features that may not be supported.</p>
+	<p>Páginas devem continuar a ser funcionais mesmo com o JavaScript desabilitado. Aplicações devem degradar normalmente, ou quando possível fazer uso dos <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">cross-browser polyfills</a>, para adicionar aos navegadores mais antigos as funcionalidades que eles não as suportam.</p>
 
-	<h3>Section 508</h3>
+	<h3>Seção 508</h3>
 	
-	<p>Interfaces developed by Isobar should meet Section 508 standards.</p>
+	<p>Interfaces desenvolvidas pela Isobar devem ter conhecimento sobre os Padrões da Seção 508. </p>
 
 	<ul>
-		<li><a href="http://www.section508.gov/index.cfm?FuseAction=Content&ID=12#Web">Section 508 Standards for intranet and internet information and applications</a>.</li>
+		<li><a href="http://www.section508.gov/index.cfm?FuseAction=Content&ID=12#Web">Seção 508 Padrões para intranet, informações da internet e aplicações de internet</a>.</li>
 	</ul>
 	
-	<h3>Accessibility Checklist</h3>
-	
-	<p>Here is the <a href="http://www.w3.org/TR/WCAG10/full-checklist.html">W3C checklist</a> of checkpoints for accessibility. Interfaces developed by Isobar should meet Priority 1 guidelines - <a href="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/#Guidelines">The WCAG 1.0 Guidelines</a>.</p>
+	<h3>Acessibilidade Checklist</h3>
+
+	<p>Aqui o checklist da <a href="http://www.w3.org/TR/WCAG10/full-checklist.html">W3C</a> sobre os pontos de verificação para acessibilidade. Intefaces desenvolvidas pela Isobar devem conhecer as diretrizes - Prioridade 1 - <a href="http://www.w3.org/TR/1999/WAI-WEBCONTENT-19990505/#Guidelines">The WCAG 1.0 Guidelines</a>.</p>
 	
 </section>
