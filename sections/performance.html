@@ -22,99 +22,100 @@
 		<li>Evite blocos em linha de &lt;script&gt;.</li>
 		<li>CSS deve estar localizado no <code>&lt;head></code> do documento, JavaScript deve estar logo antes da tag <code>&lt;/body></code>.</li>'
 		<li>CSS e JavaScript devem estar minificados no lado do servidor. A maioria das pessoas usam o <a href="http://developer.yahoo.com/yui/compressor/">YUI Compressor</a> para isso.</li>
-	
-		<li>Both should be <a href="http://code.google.com/speed/page-speed/docs/payload.html#GzipCompression">served using gzip on the wire</a></li>
-		<li>CSS should be concatenated together. Obviously this can only be done for files that share the same media type (e.g. screen or print). The general goal here is to reduce the number of HTTP connections to dependencies during the loading of the page.</li>
-	
-		<li>JavaScript should be concatenated. While a ajax script dependency manager would be ideal (similar to the YUI 3 Loader), it's rather complicated to implement. In its place I'd recommend a singular download of most of the script used on the site. (Of course, proper caching should be used to retain the file as long as is reasonable).</li>
-	
-		<li>Concatenation and minification typically occur during an automated build process, when packaging the code for deployment on stage or production. Many use tools like <a href="http://ant.apache.org/">Ant</a> or <a href="http://maven.apache.org/">Maven</a> for this.</li>
-		<li>Avoid inline <code>&lt;script></code> blocks within the HTML. They block rendering and are quite devastating to page load time.</li>
+		<li>Ambos devem ser servidos <a href="http://code.google.com/speed/page-speed/docs/payload.html#GzipCompression">usando gzip</a></li>	
+		<li>CSS devem ser concatenados juntos. Obviamente só pode ser feito com arquivos que compartilham o mesmo tipo de mídia (e.g. screen ou print). O objetivo principal é reduzir o número de conexões HTTP com dependências durante o carregamento da página.</li>
+		<li>JavaScript deve ser concatenado. Enquanto um gerenciador de script ajax seria o ideal (similar ao YUI 3 Loader), é mais complicado de se implementar. No seu lugar, eu recomendo um download singular da maior parte do script usado no site. (Claro, cache apropriado deve ser usado para manter o arquivo de forma razoável).</li>
+		<li>Concatenação e minification normalmente ocorrem durante um processo de build automatizado, ao empacotar o código para implantação no palco ou de produção. Muitos usam ferramentas como <a href="http://ant.apache.org/">Ant</a> ou <a href="http://maven.apache.org/">Maven</a>.</li>
+		<li>Evite blocos <code>&lt;script></code> em linha com o HTML. Eles bloqueiam a renderização e são bastante devastadores com o tempo de carregamento de página.</li>
 	</ul>
 	
-	
-	<h3>Optimize JavaScript execution</h3>
-	
-	<p>During a page load, there is typically a lot of script waiting to execute, but you can prioritize it. This order prioritizes based on user response:</p>
-	
+	<h3>Otimize a execucão do JavaScript</h3>
+
+	<p>Durante o carregamento da página, é comum alguns scripts esperarem para executar, mas você pode priorizar isso. Esta ordem prioriza com base na resposta do usuário:</p> 
+
 	<ol>
-		<li>Script that changes the visible nature of the page needs to fire absolutely first. This includes any font adjustment, box layout, or IE6 pngfixes.</li>
-		<li>Page content initialization</li>
-		<li>Page header, topnav and footer initialization</li>
-		<li>Attaching event handlers</li>
-		<li>Omniture, Doubleclick, and other 3rd party scripts</li>
+		<li>Scripts que mudam visivelmente a natureza da página precisam ser carregadas primeiro. Isso incluí qualquer ajuste de fonte, layout de caixa, ou IE6 pngfixes.</li>
+		<li>Inicialização do conteúdo da página</li>
+		<li>Cabeçalho da página, navegação superior e inicialização do rodapé</li>
+		<li>Anexar manipuladores de eventos</li>
+		<li>Omniture, Doubleclick, e outros scripts de terceiros</li>
 	</ol>
-	
-	
-	<h3>Leverage CSS Sprites</h3>
-	
-	<p>CSS Sprites basically take a number of image assets and merge them together into a singular image file. Each part of it is revealed using CSS background-position. Some typical CSS would look like:</p>
+
+	<h3>Alavancagem dos CSS Sprites</h3>
+
+	<p>CSS Sprites normalmente tem uma porção de imagens mescladas juntas em um arquivo único de imagem. Cada parte é revelada usando CSS <code>background-position</code>. Alguns normalmente seriam assim:</p>
 	
 	<textarea class="brush:css">
-	a.expandbox { display:block; width: 75px; height: 15px; text-indent: -999px; overflow:hidden;
-				 background: url(../img/sprite.png) no-repeat -50px -5px;  }
+	a.expandbox { 
+		display: block;
+		width: 75px;
+		height: 15px;
+		text-indent: -999px;
+		overflow: hidden;
+		background: url(../img/sprite.png) no-repeat -50px -5px;
+	}
 	</textarea>
-	
-	<p>It's quite common to leverage sprites for <code.:hover</code> states. In that case you'll see something like:</p>
+
+	<P>É muito comum o uso de sprites para estados de <code.:hover</code>. No caso, será algo assim:</p>
 	
 	<textarea class="brush:css">
 	a.expandbox:hover { background-position: -50px -20px; }
 	</textarea>
 	
-	<p>Using CSS sprites reduces total page weight and reduces HTTP connections which speeds up page load. <a href="http://css-tricks.com/css-sprites/">More on the general technique and overview of sprites.</a> It is just an overall best practice to make use of CSS sprite images whenever you can.</p>
-	
-	<p>Many developers use a vertically-oriented sprite in addition to the primary sprite. This vertical sprite will be <strong>less than or equal to 100px wide</strong> (and tall) and contain icons that are typically placed next to text, such as list item bullets or call to action links and buttons. Yahoo uses a few <a href="http://l.yimg.com/a/i/ww/sp/pa-icons3.gif">such as this one</a>.</p>
-	
-	<p>The one consideration is to not make sprites too large, something over 1000px in either direction will end up using a sizeable amount of memory. Read more on <a href="http://blog.vlad1.com/2009/06/22/to-sprite-or-not-to-sprite/">when to use sprites and memory usage here</a>, and for more general tips and techniques on creating sprites check out the <a href="http://blog.mozilla.com/webdev/2009/03/27/css-spriting-tips/">Mozilla Dev Blog</a>.</p>
+	<p>Usando CSS sprites você reduz o peso total da página e também o número de conexões HTTP, acelerando o carregamento da página. <a href="http://css-tricks.com/css-sprites/">Mais sobre técnicas gerais e uma visão sobre sprites.</a> Isto é apenas uma melhor prática para se fazer,  sempre que puder, o uso de CSS Sprites.</p>
 
+	<p>Muitos desenvolvedores usam um sprite verticalmente-orientado para o sprite primário. Este sprite vertical deve ter <strong>menos do que ou igual a 100px de largura</strong> (e alto), conter ícones que normalmente são colocadas junto ao texto, tais como balas de ítem de lista ou ligue para links e botões de ação. Yahoo usa <a href="http://l.yimg.com/a/i/ww/sp/pa-icons3.gif">poucos como este</a>.</p> 
 
-	<h3>Image formats</h3>
-	
-	<p>There are four main image formats that should be used, detailed here:</p>
+	<p>A única consideração é que não fazer sprites muitos largos, algo entre 1000px em qualquer direção vai acabar usando uma quantidade considerável de memória. Leia mais em <a href="http://blog.vlad1.com/2009/06/22/to-sprite-or-not-to-sprite/">quando usar sprites e o uso de memória</a>, e para mais dicas gerais e técnicas na criação de sprites, veja o <a href="http://blog.mozilla.com/webdev/2009/03/27/css-spriting-tips/">Mozilla Dev Blog</a>.</p>
+
+	<h3>Formato de imagens</h3>
+
+	<p>Aqui os quatros principais formatos de imagens que devem ser usados, detalhes abaixo:</p>
 	
 	<dl>
 		<dt>JPEG</dt> 
-		<dd>This will cover all photography-based images, such as homepage and category page promo images, or anything with a very high color count.</dd>
+		<dd>Ele será responsável por todas as imagens fotográficas, tal como imagens promocionais da homepage e categoria, ou qualquer imagem com um número muito alto de cores.</dd>
 
 		<dt>PNG24</dt> 
 		<dd>
-			<p>This format is easily accessible in Photoshop outputs high-color count imagery and fully supports graded opacity by pixel. Relatively, it's quite a heavy format as far as weight in kilobytes. It is the only format that IE6 needs to execute a pngfix on. When projects require support of IE6, we use the <a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">DD_belatedPNG script</a> (A pngfix fixes the issue where PNG24's appear to have a gray or light-blue background in IE6. They are not always compatible with background-position).</p>
-		
-			<p>In many cases you can use a GIF fallback for IE6 in place of a PNG24. This is especially true if any sprites need to be done in PNG24. All pngfixes are very slow and expensive, so it's best to avoid using them.</p>
+			<p>Este formato é facilmente acessível em Photoshop, gera imagens de alta contagem de cores e apoia suporte a opacidade graduada por pixel. Relativamente, é um formato pesado, medindo em kilobytes. Este é apenas o único formato que o IE6 precisa executar um pngfix para funcionar. Quando projetos precisam dar suporte ao IE6, nós usamos o script <a href="http://www.dillerdesign.com/experiment/DD_belatedPNG/">DD_belatedPNG</a> (Um pngfix que corrige o problema quando PNG24's aparece com um cinza ou um azul claro fundo no IE6. Eles nem sempre são compatíveis com background-position).</p>
+
+			<p>E muitos casos você pode usar um fallback em GIF para o IE6 no lugar do PNG24. Isso será mais evidente se quaisquer sprites precisam ser feitas em PNG24. Todos os pngfixes são muitos lentos e caros, por isso é melhor evitá-lo.</p>
 		</dd>
 
 		<dt>PNG8</dt>
 		<dd>
-			<p>A surprising diversity of color can be captured inside 256 colors, so it's worth trying PNG before heading JPG. PNG also is a lot more compressible than GIF. This format allows graded opacity in nearly all browsers, but in IE6, those semi-opaque pixels are just shown 100% transparent. In many cases this is sufficient. It also does not require a pngfix script to be run, so it's optimized for speed.</p>
-			
-			<p>Photoshop cannot output these semi-opaque files correctly but Fireworks can. <a href="http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/">http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/</a></p>
+			<p>A surpreendente diversidade de cores pode ser capturada dentro das 256 cores, por isso vale a pena tentar PNG antes de JPG. PNG também é muito mais compacto que o GIF. Este formato permite opacidade graduada em quase todos os navegadores, mas no IE6 os pixels semi-opacos são apenas mostrado 100% transparente. Em muitos casos isso é suficiente. Ele também não exige um pngfix para ser executado, por isso é otimizado para velocidade.</p>
+
+			<p>Photoshop não pode produzir esses arquivos semi-opacas corretamente, mas o Fireworks pode.<a href="http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/">http://www.sitepoint.com/blogs/2007/09/18/png8-the-clear-winner/</a></p>
 		</dd>
 		
 		<dt>Transparent GIF 89a</dt>
 		<dd>
-			<p>GIF 89a offers the flexibility of transparency and wide browser support, but the constraints of no graded opacity nor a color depth above 256. In our experience, color depths of 64 still provide very good quality thumbnails, and keep the file size comparably very small.</p>
-		
-			<p>All low-color count imagery such as icons or thematic graphics should be done in PNG8, as it's the most size-efficient of these four. PNG8 is our primary recommendation for most site graphics.</p>
+			<p>GIF 89a oferece a flexibilidade da transparência e amplo suporte dos navegadores, mas as restrições de nenhuma opacidade graduada, nem uma profundidade acima de 256 cores. Em nossa experiência, profundidade de 64 cores fornecem boa qualidade em miniaturas, e mantem o tamanho do arquivo comparativamente muito pequeno.</p>
+
+			<p>Todas baixa contagens de cores em imagens como ícones ou gráficos temáticos devem ser feitos em PNG8, como é mais eficiente em termos de tamanho deste quatro. PNG8 é a nossa principal recomendação para a maioria dos gráficos em sites.</p>
 		</dd>
 	</dt>
+
+	<p>Detalhes sobre o formato PNG, suporte dos navegadores, e os prós e contras <a href="http://calendar.perfplanet.com/2010/png-that-works/">é abordado neste artigo</a>.</p>
+
+	<p>Para mais otimização destes formatos, use o <a href="http://developer.yahoo.com/yslow/smushit/">Yahoo's Smush.It</a>, ele irá revelar como eles podem ser menores.</p>
 	
-	<p>Detailed information on the PNG format, browser support, and the pros and cons of each <a href="http://calendar.perfplanet.com/2010/png-that-works/">is covered in this article</a>.</p>
-	
-	<p>For further optimization all of these formats, taking them through <a href="http://developer.yahoo.com/yslow/smushit/">Yahoo's Smush.It</a> will reveal how they can be smaller.</p>
-	
-	
-	<h3>Caching</h3>
-	
-	<p>For static content, the browser should cache the file locally as long as it's reasonable. Content that should have caching set further in the future includes things like:</p>
+	<h3>Cache</h3>
+
+	<p>Para conteúdo estático, o navegador deve cachear o arquivo localmente, enquanto for razoável.O conteúdo que deveria ter cache definir no futuro inclui coisas como:</p>
 	
 	<ul>
-		<li>CSS and JavaScript files</li>
-		<li>product images</li>
-		<li>thematic graphics</li>
+		<li>arquivos CSS e JavaScript</li>
+		<li>imagens de produtos</li>
+		<li>gráficos temáticos</li>
 		<li>favicon.ico</li>
-		<li>flash .swf's and videos</li>
-		<li>promotional images (lighter caching likely)</li>
+		<li>flash .swf's e vídeos</li>
+		<li>imagens promocionais (leve cache provável)</li>
 	</ul>
+
+	<p>Para um melhor cache, alavanque o <code>Expires http header</code>.
 	
 	<p>For the best caching, leverage the <code>Expires http header</code>. This is a far future Expires header, telling the browser that this response won't be stale until April 15, 2015.</p>
 	
