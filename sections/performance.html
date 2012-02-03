@@ -115,24 +115,21 @@
 		<li>imagens promocionais (leve cache provável)</li>
 	</ul>
 
-	<p>Para um melhor cache, alavanque o <code>Expires http header</code>.
-	
-	<p>For the best caching, leverage the <code>Expires http header</code>. This is a far future Expires header, telling the browser that this response won't be stale until April 15, 2015.</p>
+	<p>Para um melhor cache, alavanque o <code>Expires http header</code>. Este é um futuro distante de Expires header, dizendo ao navegador que esta resposta não será obsoleto até 15 de abril de 2015.</p>
 	
 	<pre>Expires: Thu, 15 Apr 2015 20:00:00 GMT</pre>
-	
-	<p>If your server is Apache, use the <code>ExpiresDefault</code> directive to set an expiration date relative to the current date. This example of the <code>ExpiresDefault</code> directive sets the Expires date 1 year out from the time of the request.</p>
+
+	<p>Se o seu servidor é Apache, use a diretiva <code>ExpiresDefault</code> para configurar uma data de expiração relativa a data atual. Este é um exemplo usando o <code>ExpiresDefault</code>, configurando o Expires date para 1 ano depois da data de requisição.</p>
 	
 	<pre>ExpiresDefault "access plus 1 year"</pre>
+
+	<p><code>Expires http header</code> deve ser configurado para um valor entre um mês a partir do presente a um ano (futuro distante) do presente. Cacheamento aplicado em apenas uma exata URL, para uma mudança no nome do arquivo de qualquer ativo vai começar uma nova cópia. Muitos desenvolvedores usam um processo de construção para adicionar um número de versão ou carimbo de tempo, um exemplo disso é o HTML5 Boilerplate. Cada compilação subsequente vai começar uma nova versão em cache, permitindo que você use datas de cache de futuro distante sem se preocupar. <a href="http://code.google.com/speed/page-speed/docs/caching.html#LeverageBrowserCaching ">Google tem bastante detalhes sobre cache do navegador</a>.</p>
 	
-	<p><code>Expires http header</code> should be set to a value between one month from present to a year (far future) from present. Caching only applies to that exact URL, so a change in the filename of any asset will start a fresh copy. Many developers use a build process to add a version number or timestamp to their assets, one example of this is the HTML5 Boilerplate. Each subsequent build will start a brand new cached version allowing you to use far future cache dates without worry. <a href="http://code.google.com/speed/page-speed/docs/caching.html#LeverageBrowserCaching ">Google has a lot more detail on browser caching</a>.</p>
-	
-	
-	<h3>Shard resources across domains</h3>
-	
-	<p>Static content should certainly be served from a domain different than the one that serves HTML. This is optimal so that there are <a href="http://developer.yahoo.com/performance/rules.html#cookie_free">no extra cookies headers on all static content requests</a>. It's also much easier to write caching rules for the entire domain. (Also any subdomains of the current domain will inherit domain cookies, so it's worth using a completely new domain).</p>
-	
-	<p>However with enough assets (especially images) the number of requests grows enough to slow down the load of the page. Many browsers have a low constraint of how many assets they will download simultaneously per domain. (In IE6 and 7, it's only two). In this case, we can serve the assets from multiple subdomains such as:</p>
+	<h3>Recursos compartilhados em vários domínios</h3>
+
+	<p>Conteúdo estático deve certamente ser servido de um domínio diferente daquele que serve o HTML. Isto é o ideal e não há que ter <a href="http://developer.yahoo.com/performance/rules.html#cookie_free">extra cookies headers em toda requisição de conteúdo estático.</a> É também muito fácil de se escrever regras de cache para todo o domínio. (Também qualquer subdomínio do domínio atual irão herdar os cookies, por isso vale a pena usar um domínio completamente novo).</p>
+
+	<p>Embora com suficientes acertos (especialmente em imagens) o número de requisições cresce o suficiente para deixar lento o carregamento da página. Muitos navegadores têm uma restrição baixa de quantos bens que irá baixar simultaneamente por domínio. (No IE6 e 7, é apenas dois). Em todo o caso, podemos servir múltiplos domínios dessa forma: </p>
 	
 	<ul>
 		<li>static1.otherdomain.com</li>
@@ -140,56 +137,55 @@
 		<li>static3.otherdomain.com</li>
 	</ul>
 
-	<p><a href="http://code.google.com/speed/page-speed/docs/rtt.html#ParallelizeDownloads">More information on domain sharding on Google Speed</a></p>
+	<p><a href="http://code.google.com/speed/page-speed/docs/rtt.html#ParallelizeDownloads">Mais informações sobre sharding de domínio no Google Speed</a></p>
 	
-	
-	<h3>Avoid IFRAMEs</h3><!-- like the plague -->
+	<h3>Evite IFRAMEs</h3><!-- like the plague -->
 	
 	<p>Iframes are the most costly element to add to a given page. They block the page from firing the onload event until they are complete. Sometimes they are useful to let another agency handle tracking scripts. For example the Doubleclick floodlight tag is an iframe, and the admin can add tracking pixels into it from their dashboard. In any case where an iframe is added, it should be appended to the DOM dynamically after window onload has fired. <a href="http://developer.yahoo.com/performance/rules.html#iframes">More detail at Yahoo's Performance site.</a></p>
 	
 	
-	<h3>3rd Party Integration</h3>
+	<h3>Interação com serviços de terceiros</h3>
 	
 	<h4>Omniture</h4>
 	
-	<p>We recommend to add the Omniture JavaScript code to the DOM using JavaScript after the page has loaded (either a DOM ready event or window's load event). Using this technique, there is no external domain script dependency, which can slow down (and potentially hang) a page load.</p>
-	
+	<p>Nós recomendamos que adicione o código do Omniture JavaScript para o DOM usando JavaScript após a página ter sido carregada (seja um evento DOM ready ou window's load event). Usando esta técnica, não terá dependências de scripts partindo de domínios externos, que pode deixar lento (e bem lento).</p>
 	
 	<h4>Flash</h4>
+
+	<p>Conteúdo de backup deve estar no mesmo lugar do Flash em todos os cados para maximizar o valor do SEO. Pará XML-driven, o backup do conteúdo deve ser alavancando o mesmo arquivo XML exato, para garantir a consistência dos dados.</p>
 	
 	<p>Backup HTML content should be in place of the flash in all cases to maximize SEO value. For XML-driven flash, the backup HTML content should be leveraging the exact same XML file, to ensure data consistency.</p>
+
+	<p>Todas as substituições devem ser feitas usando SWFObject, mas sem tags em linha <code>script</code>. Inicialização SWFObject deve executar após o evento DOM Ready. Versões do player devem estar ajustadas para no mínimo v9, para garantir compatibilidade com AS3.</p>
+
+	<h2 id="browserperformance">Estratégia de Performance Cross-Browser</h2>
+
+	<p>Há duas verdades importantes quando se trata de experiência de navegador:</p>
+
+	<ol>
+		<li>Sempre procure a experiência mais responsiva possível.</li>
+		<li>Tudo adicionado a página desacelera.</li>
+	</ol>
+
+	<p>Assim com estes dois fatos da vida, quais os passos que precisamos para deixar todos felizes?</p>
+
+	<h3>Crie métricas de sucesso com o cliente</h3>
+
+	<p>Estas devem ser customizadas para o seu cliente e projeto, devem também ser terminadas antes da fase de wireframing. Estes objetivos devem ser razoáveis a partir de um POV técnico, bem como testáveis.</p>
 	
-	<p>All replacements should be done using SWFObject but without inline script tags. SWFObject initialization should fire after the DOM Ready event. Minimum player version should be set to minimum v9, to ensure AS3 compatibility.</p>
-	
-
-
-		<h2 id="browserperformance">Cross-Browser Performance Strategy</h2>
-		<p>There are two major truths when it comes to in-browser experience:</p>
-
-		<ol>
-			<li>Everyone wants the most responsive experience possible.</li>
-			<li>Everything added to the page slows it down.</li>
-		</ol>
-
-		<p>So with these two facts of life, what steps do we need to take so everyone is happy?</p>
-	
-
-	<h3>Create success metrics with the client</h3>
-
-	<p>These should be customized to your client and project and done before the wireframing phase. These goals should be reasonable from a technical POV, as well as testable.</p>
-	
-	<strong>Some goals that would be appropriate:</strong>
+	<strong>Alguns objetivos que seriam apropriados:</strong>
 	
 	<ol>
-		<li>The slowest browser supported must go from an empty cache to fully loaded and initialized within 5 seconds.</li>
-		<li>Hover states (and other 'instant' changes) should respond within 100ms.</li>
-		<li>Animations should appear smooth, with jumpiness occurring &lt; 15% of the time (across all browsers).</li>
+		<li>O navegador mais lento suportado deve carregar totalmente a página com o cache vazio em 5 segundos.</li>
+		<li>Estados hover (e outras mudanças 'instantâneas') devem responder com 100ms.</li>
+		<li>Animações devem surgir suavemente, com jumpiness ocorrendo &lt; 15% do tempo (em todos os navegadores).</li>
 	</ol>
-	
-	<p>For load-time based goals, it's important to define the benchmark system. Something like <a href="http://www.webpagetest.org/">PageTest</a> is a good option. Additionally, goals may be defined for multiple pages, for example: the two most popular landing pages (e.g. homepage and support).</p>
+
+	<p>Para metas de carregamento de página, é importante definir o benchmark do sistema. Algo como <a href="http://www.webpagetest.org/">PageTest</a> é uma boa opção. Adicionalmente, metas podem ser definidas para múltiplas páginas, por exemplo: as duas maiores páginas de destino (ex: homepage e suporte).
+
+	<p>Se o cliente tiver metas mais agressivas que são razoáveis ​​com o pretendido, as expectativas devem ser definidas através da placa, avisar a equipe das metas de desempenho do projeto vai ser fundamental.</p>
 	
 	<p>If the client has more aggressive goals than are reasonable with the intended design, expectations need to be set across the board, priming the team that performance goals are going to be paramount.</p>
-
 
 	<h3>Communicating the performance impact during design phase</h3>
 
