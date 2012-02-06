@@ -184,51 +184,46 @@
 	<p>Para metas de carregamento de página, é importante definir o benchmark do sistema. Algo como <a href="http://www.webpagetest.org/">PageTest</a> é uma boa opção. Adicionalmente, metas podem ser definidas para múltiplas páginas, por exemplo: as duas maiores páginas de destino (ex: homepage e suporte).
 
 	<p>Se o cliente tiver metas mais agressivas que são razoáveis ​​com o pretendido, as expectativas devem ser definidas através da placa, avisar a equipe das metas de desempenho do projeto vai ser fundamental.</p>
+
+	<h3>Comunicando o impacto de performance durante o processo de design</h3>
+
+	<strong>Internalmente</strong>
+
+	<p>Durante IA, IxD, e o a criação do design, é o papel do front-end comunicar o impacto de performance das características interativas ou certas técnicas visuais dos navegadores alvos. Dê aos designers as restrições: "Se nós usarmos Cufon, não podemos ter mais de 10 elementos de fontes customizadas por página.</p>
+
+	<strong>Externamente</strong>
+
+	<p>Expectativas precisam ser definidas, <strong>todos os navegadores não terão a mesma experiência</strong>. Eles não vão executar, bem como uns aos outros, não farão sentido eles terem semelhanças. Seria sensato deixar de suportar algumas características para a experiência com IE7. Catacterísticas que podem ser descartadas: <em>shadows, transitions, rounded corners, opacity, gradients.</em></p>
 	
-	<p>If the client has more aggressive goals than are reasonable with the intended design, expectations need to be set across the board, priming the team that performance goals are going to be paramount.</p>
-
-	<h3>Communicating the performance impact during design phase</h3>
-
-	<strong>Internally</strong>
-
-	<p>During IA, IxD, and visual design, it is the front end engineer's role to communicate the performance impact of interactive features or certain visual techniques on the target browsers. Give the designers constraints: "If we're using Cufon, we cannot have more than 10 elements of custom font per page."</p>
-
-	<strong>Externally</strong>
-
-	<p>Expectations need to be set that <strong>all browsers will not have the same experience</strong>. They won't perform as well as each other, nor may it make sense to have feature parity. It may be sensible to drop a few features from the IE7 experience. Features that could be considered to be dropped are: <em>shadows, transitions, rounded corners, opacity, gradients.</em></p>
-	
-	<strong>When communicating the impact of something:</strong>
+	<strong>Quando comunicamos o impacto de algo:</strong>
 
 	<ul>
-		<li>Clarify the impact with as much detail as possible: "it will hurt page load" vs "it will add 2 seconds to page load in IE"</li>
-		<li>Provide a quick POC (proof of concept) if it's reasonable: "This similar-looking page without siFR loads in 2 seconds, with siFR it loads in 8 and has a delay to show during scrolling"</li>
+		<li>Deixe claro o impacto com os maiores detalhes possível: "isso irá ferir o carregamento da página" vs "isso somará mais 2 segundos de carregamentos do site no IE"</li>
+		<li>Fornecer um POC rápido (prova de conceito), se possível: "É uma página semelhante sem siFR carrega em 2 ssegundos, com siFR ela carrega em 8 com um atraso para visualizar quando há rolagem"</li>
 	</ul>
-	
 
-	<h3>Develop according to best practices</h3>
+	<h3>Desenvolver de acordo com as melhores práticas</h3>
 
-	<p>Choose libraries and plugins that are performance optimized. Make wise architecture decisions based on performance goals. Also minimize DOM manipulation when possible, and write styles to <a href="http://paulirish.com/2009/avoiding-the-fouc-v3/">avoid visual changes</a> to the page as it loads and initializes.</p>
+	<p>Escolha bibliotecas e plugins que tem otimização na performance. Tome decisões sábias na arquitetura baseado nas metas de performance. Também minimize manipulação do DOM quando possível, e escreva estilos para <a href="http://paulirish.com/2009/avoiding-the-fouc-v3/">evitar mudanças visuais</a> como a página carrega e inicializa.</p>
 
+	<h3>Medir a performance durante o QA</h3>
 
-	<h3>Measure performance during QA</h3>
+	<p>Times <abbr title="Quality Assurance">QA</abbr> (em português, Garantia da qualidade) devem também priorizar desempenho, relacionados ao lado do visual e questões de usabilidade. Desenvolvedoress e QA devem determinar como esta prioridade será atribuída. Durante o QA, as métricas de sucesso devem ser testadas regularmente.</p>
 
-	<p>QA teams should also prioritize performance related tickets alongside visual, functional, and usability issues. Developers and QA should determine how that priority will be assigned. During QA, the success metrics should be tested regularly.</p>
-
-	<strong>Tools to test with</strong>
+	<strong>Ferramentas para teste</strong>
 
 	<ul>
 		<li><a href="http://developer.yahoo.com/yslow/">YSlow</a>, <a href="http://code.google.com/speed/page-speed/">Page Speed</a>, <a href="http://stevesouders.com/hammerhead/">Hammerhead</a>, <a href="http://msfast.myspace.com/">MSFast</a>, <a href="http://www.webpagetest.org/">PageTest</a></li>
 	</ul>
 
-	<strong>When performance goals aren't met, there are three options:</strong>
+	<strong>Quando as metas de performance não são cumpridas, há três opções:</strong>
 
 	<ol>
-		<li><em>Redevelop the code</em> - profile, discover bottlenecks, refactor code, optimize to target faster execution in the browser</li>
-		<li><em>Drop the feature</em> - turn it off for slower browsers only</li>
-		<li><em>Redesign approach of the UI</em> - perhaps the design could use a tweak which would bypass the issue entirely</li>
+		<li><em>Reconstrua o código</em> - perfil, descobrir os gargalos, refatorar o código, otimizar a atingir uma execução mais rápida no navegador</li>
+		<li><em>Largue o recurso</em> - desligá-lo para os navegadores mais lentos só</li>
+		<li><em>Redesenho da abordagem do UI</em> - talvez o projeto poderia usar um ajuste que seria ignorar totalmente o problema</li>
 	</ol>
 
-	<p>With this approach, we think all parties have a better chance of having aligned expectations heading in as well as a more sensible workflow in dealing with performance challenges.</p>
-
+	<p>Com essa abordagem, nós achamos que todas as partes devem ter uma melhor chance de ter as expectativas alinhadas, bem como um fluxo de trabalho mais sensível no lidar com os desafios de desempenho.</p>
 
 </section>
