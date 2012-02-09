@@ -243,9 +243,9 @@
 
 	<h2>Tipografia Web</h2>
 
-	<p>O uso de fontes customizadas e caracteres tipográficos na web tem se tornado muito popular nos últimos anos. Com o suporte nativo do browser em ascensão, vários serviços de apoio e APIs agora disponível, existe real impulso neste espaço. Cada uma dessas abordagens tem suas vantagens e desvantagens. Antes de um projeto começar, é melhor fazer uma pesquisa para saber as limitações tecnológicas e de licenciamento para escolher abordagem apropriada para o projeto em específico.</p>
+	<p>O uso de fontes customizadas e caracteres tipográficos na web tem se tornado muito popular nos últimos anos. Com o suporte nativo do browser em ascensão, vários serviços de apoio e com APIs agora disponíveis, existe real impulso neste espaço. Cada uma dessas abordagens tem suas vantagens e desvantagens. Antes de um projeto começar, é melhor fazer uma pesquisa para saber as limitações tecnológicas e de licenciamento para escolher abordagem apropriada para o projeto em específico.</p>
 
-	<p>Todas essas abordagens tem incovenientes com sobrecarga de código, tempo de desenvolvimento e performance (cronometrada e perceptível). Familiarizar-se com estes problemas, comunicá-los aos outros membros da sua equipe e ao cliente, irá salvá-lo mais tarde de significantes problemas no projeto.</p>
+	<p>Todas essas abordagens tem incovenientes com sobrecarga de código, tempo de desenvolvimento e performance (cronometrada e perceptíveis). Familiarizar-se com estes problemas, comunicá-los aos outros membros da sua equipe e ao cliente, irá salvá-lo mais tarde de significantes problemas no projeto.</p>
 
 	<p>Abaixo alguns métodos populares de incorporar fontes customizadas, listadas em ordem de nossa preferência de implementação:</p>
 	
@@ -306,7 +306,7 @@
 	
 	<ul>
 		<li>IE 6–8 apenas será aceito com uma fonte TrueType empacotada como uma EOT.</li>
-		<li>font-weight e font-style tem diferentes significados com o <code>@font-face</code>. 
+		<li><code>font-weight</code> e <code>font-style</code> tem diferentes significados com o <code>@font-face</code>. 
 			Declarações como <code>font-weight:bold;</code> significa que esta é a versão em negrito da fonte, ao invés de aplicar o negrito a este texto.</li>
 		<li><a href="http://paulirish.com/2010/font-face-gotchas/">Dicas para @font-face</a></li>
 	</ul>
@@ -318,8 +318,8 @@
 		<li>Larga variedade de APIs</li>
 		<li>Customizável</li>
 		<li>Fácil para adicionar aos elementos</li>
-		<li>Nada requerido além do CSS</li>
-		<li>Atualmente faz parte do projeto de trabalho do Fontes - CSS Módulo 3</li>
+		<li>Nada requerido além do próprio CSS</li>
+		<li>Atualmente faz parte do projeto de trabalho de Fontes da W3C - CSS Módulo 3</li>
 	</ul>
 	
 	<strong>Contras</strong>
@@ -398,7 +398,7 @@
 	
 	<ul>
 		<li>Biblioteca pequena de fontes quando se usa a API Fonte</li>
-		<li>Usando o Webfont Loader é necessário o uso de JavaScript para que funcione</li>
+		<li>Usando o Webfont Loader é necessário o uso de JavaScript para que ele funcione</li>
 		<li>A maioria dos navegadores carregam primeiro o restante da página, deixando um espaço em branco onde o texto deveria aparecer, ou se houver, dão algum recurso alternativo só quando a página terminou de carregar.</li>
 		<li>Algumas fontes da biblioteca webfonts renderizam pobremente no Windows</li>
 	</ul>
@@ -467,13 +467,13 @@
 	
 	<hr />
 
-	<h3>Substituição de Flash Inman Escalável/Scalable Inman Flash Replacement (sIFR)</h3>
+	<h3>Scalable Inman Flash Replacement (sIFR)</h3>
 
 	<p>Nós não recomendamos que você utilize este método. Como foi amplamente utilizado, se sentiu que ele não é mais necessário como opção nas escolhas de quais métodos usar para implementar fontes personalizadas.</p>
 
-	<p>Apesar de ser popular entre Web Designers, e ter um bom suporte na maioria dos navegadores, as desvantagens dele não compensam o uso. A grande e mais óbvia razão de se não usar sIFR é porque ela utiliza Flash. E mais, para o Flash funcionar corretamente, ele necessita de Javascript e os scripts devem ser carregados antes do texto que você usou e isto é visível na página. Sem contar, que ele aumenta o tempo de carregamento da página e pode deixar um site lento ainda mais lento.</p>
+	<p>Apesar de ser popular entre Web Designers, e ter um bom suporte na maioria dos navegadores, as desvantagens dele não compensam o uso. A grande e mais óbvia razão de se não usar sIFR é porque ela utiliza Flash. E mais, para o Flash funcionar corretamente, ele necessita de JavaScript e os scripts devem ser carregados antes do texto que você usou e fica é visível na página. Sem contar que ele aumenta o tempo de carregamento da página e pode deixar um site lento ainda mais lento.</p>
 
-	<p class="normalize">Nós vamos deixar você fazer a matemática aqui.</p>
+	<p class="normalize">Nós vamos deixar você fazer a matemática aqui:</p>
 	
 	<strong>Prós</strong>
 	
@@ -489,7 +489,7 @@
 		<li>Ele usa Flash</li>
 		<li>Requer JavaScript para que o Flash funcione</li>
 		<li>É em Flash!</li>
-		<li>Texto não aparece até que que se carregue os scripts</li>
+		<li>Texto não aparece até que se carregue os scripts</li>
 		<li>...e é Flash...</li>
 	</ul>
 	
@@ -497,7 +497,7 @@
 	
 	<h3>Licenciamento de Fontes</h3>
 	
-	<p>Mesmo que você possa praticamente transformar qualquer fonte em um arquivo fonte web, você deve se certificar de que está legalmente de acordo para fazê-lo. Muitas fundições tem atualizado suas condições para especificar como suas fontes podem ser usadas na web. Veja <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=UNESCO_Font_Lic">Licenciamento de Fonte e detalhes relativos a sua proteção</a> para mais informações.</p>
+	<p>Mesmo que você possa praticamente transformar qualquer fonte em um arquivo fonte web, você deve se certificar de que está legalmente de acordo para fazê-lo. Muitas fundições tem atualizado suas condições para especificar como suas fontes podem ser usadas na web. Veja <a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=UNESCO_Font_Lic">Licenciamento de Fonte e detalhes relativos a sua proteção</a>, para mais informações.</p>
 	
 	<hr />
 	
@@ -517,7 +517,7 @@
 
 	<h3>Usando CSS3</h3>
 
-	<p>Você pode fazer um monte de coisas com as novas características adicionados na especificação do CSS3, muitas das quais ainda não são totalmente suportadas por todos os principais navegadores. Isto não quer dizer que você não pode usá-las hoje. Para as coisas que ainda não tem suporte, existem bibliotecas fallback ou outros 'polyfills' para preencher os buracos onde os navegadores podem faltar algum suporte de um novo recurso.</p>
+	<p>Você pode fazer um monte de coisas com as novas características adicionadas na especificação do CSS3, muitas das quais ainda não são totalmente suportadas por todos os principais navegadores. Isto não quer dizer que você não pode usá-las hoje. Para as coisas que ainda não tem suporte, existem bibliotecas fallback ou outros 'polyfills' para preencher os buracos onde os navegadores podem faltar algum suporte de um novo recurso.</p>
 
 	<p>Existem também algumas propriedades específicas do navegador ou prefixos que devem ser usados para estilar elementos também. Nós recomendamos usar o <a href="http://prefixr.com">Prefixr.com</a> para ter certeza que você incluiu todos os diferentes prefixos e propriedades para suporte em todos os navegadores.</p>
 	
