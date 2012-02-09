@@ -8,7 +8,7 @@ include_once('layout/header.php');
 ?>
 
 	<body>
-		<a class="fork" href="https://github.com/isobar-idev/code-standards/" target="_blank"></a>
+		<a class="fork" href="https://github.com/haggen/code-standards" target="_blank"></a>
 		<div id="container">
 		
 			<header role="banner">
