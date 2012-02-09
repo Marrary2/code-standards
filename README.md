@@ -21,3 +21,9 @@ O arquivo index.php é usado para incluir cada um dos arquivos HTML contido dent
 Cada um desses arquivos incluem conteúdo embrulhado dentro das seções. Este deve ser de preferência auto-explicativo. Em cada seção, fazemos uso de todos as tags h1-h6 de cabeçalho, várias vezes, desde que o HTML5 permite que você use muitos a seu gosto. Claro, nós tentamos sempre usá-los e todas as outras tags HTML5 de forma adequada, e fazendo uso de tags semânticas onde eles são mais adequados.
 
 Consulte o esboço HTML5 do documento no wiki para ter uma idéia melhor da arquitetura da página: http://goo.gl/xEjB5
+
+## Tradução
+
+Documento traduzido e adaptado por Andrews F.G (@andrecomws) e Arthur Corenzan (@haggen).
+Mande sua sugestão, correção ou comentário para nós. Você será bem vindo!
+http://github.com/haggen/code-standards

@@ -10,9 +10,10 @@
 
 
 <!--
+    Documento traduzido por Andrews F.G (@andrewsfg) e Arthur Corenzan (@haggen). Mande sua correção, sugestão em https://github.com/haggen/code-standards
                 _^_
                / _)
-        .-^^^-/ /         nós gostamos de dinossauros tanto quanto você.
+        .-^^^-/ /         nós gostamos de dinossauros tanto quanto você. 
     __/       /
     <__.|_|-|_|
 
