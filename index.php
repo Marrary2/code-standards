@@ -1,7 +1,7 @@
 <?php
 $page_title = "Padrões de código &amp; melhores práticas em Front-end";
 $page_keywords = "Isobar code standards, coding standards, frontend development, frontend best practices, html code standards, html5 code standards, css code standards, best code practices, development, frontend development";
-$page_description = "Isobar North America's Coding Standards and Frontend development Best Practices";
+$page_description = "Padrões de Codificação Isobar América do Norte e Práticas Frontend Melhores desenvolvimento";
 $protocol = (strstr('https',$_SERVER['SERVER_PROTOCOL']) === false)?'http':'https'; 
 $page_root = $protocol.'://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['REQUEST_URI']);
 include_once('layout/header.php');
@@ -15,14 +15,14 @@ include_once('layout/header.php');
 				<h1><a id="logo" href="<?php echo $page_root; ?>">Isobar US</a></h1>
 				
 				<canvas id="canvas-logo" width="500" height="300">
-					<strong>Your browser cannot handle the awesomeness of this!</strong>
+					<strong>Seu navegador não pode lidar com tamanha a grandiosidade!</strong>
 				</canvas>
 
                 <ul id="social">
 					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=5&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="facebook"></a></li>
 					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=7&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="twitter"></a></li>
 					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=2&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="delicious"></a></li>
-					<li><a href="http://na.isobar.com" id="linkback">Return to Isobar US</a></li>
+					<li><a href="http://na.isobar.com" id="linkback">Retornar Isobar US</a></li>
 				</ul>
 			</header>
 
@@ -56,8 +56,8 @@ include_once('layout/header.php');
 
 		<footer role="contentinfo">
 			<p>
-				<span class="float_left"><?php print date("Y"); ?> Isobar North America, Inc. All rights reserved.</span>
-				<span class="float_right">All content licensed under Creative Commons Attribution 3.0 Unported License</span>
+				<span class="float_left"><?php print date("Y"); ?> Isobar North America, Inc. Todos os direitos reservados.</span>
+				<span class="float_right">Todo conteúdo licenciado sobre Creative Commons Attribution 3.0 Unported License</span>
 			</p>
 		</footer>
 
@@ -80,12 +80,12 @@ include_once('layout/header.php');
 		<script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
 		<![endif]-->
 
-  <script>
-    var _gaq=[['_setAccount','UA-1745698-2'],['_trackPageview'],['_trackPageLoadTime']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-  </script>
+  	<script>
+        window._gaq = [['_setAccount','UA-1612394-12'],['_trackPageview'],['_trackPageLoadTime']];
+        Modernizr.load({
+            load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+        });
+    </script>
 
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->

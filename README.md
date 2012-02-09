@@ -1,24 +1,23 @@
-#  Isobar Front-end Development Standards [http://na.isobar.com/standards](http://na.isobar.com/standards)
+#  Isobar Front-end Padrões de Desenvolvimento [http://na.isobar.com/standards](http://na.isobar.com/standards)
 
-## License:
+## Licença:
 
-All content licensed under Creative Commons Attribution 3.0 Unported License
+Todo conteúdo está licenciado através de Creative Commons Attribution 3.0 Unported License
 
-## Summary:
+## Resumo:
 
-This document contains guidelines for web applications built by the Creative Technology (front end engineering) practice of Isobar North America (previously Molecular). It is to be readily available to anyone who wishes to check or contribute to the iterative progress of our discipline's best practices.
+Este documento contém diretrizes para aplicações web construídas pela Creative Technology (engenharia front-end), prática da Isobar América do Norte (anteriormente Molecular). É para estar prontamente disponível para qualquer pessoa que deseje verificar ou contribuir para o progresso iterativo de melhores práticas a nossa disciplina.
 
-This document's primary motivation is two- fold: 1) code consistency and 2) best practices. By maintaining consistency in coding styles and conventions, we can ease the burden of legacy code maintenance, and mitigate risk of breakage in the future. By adhering to best practices, we ensure optimized page loading, performance and maintainable code.
+A motivações principais deste documento são duas: 1) a consistência do código e 2) as melhores práticas. Ao manter a consistência na codificação estilos e convenções, podemos aliviar o fardo de manutenção de código legado, e mitigar o risco de problemas no futuro. Ao aderir às melhores práticas, podemos garantir carregamento otimizado da página, desempenho e fácil manutenção de código.
 
-Code standards are living documents, and should themselves change to reflect the latest best practices, thought leadership, and trends both in the community whose practices they seek to standardize and in the greater development community as a whole. Front-end development is one of the fastest growing disciplines in software development; to ensure that our standards are able to keep pace, we want you to fork us, discuss additions, send us pull requests, and add issues to debate emerging standards and practices.
+Padrões de código são documentos vivos, e deve se mudar para refletir as últimas das melhores práticas, a liderança de pensamento e tendências, tanto na comunidade cujas práticas buscam padronizar e na comunidade maior desenvolvimento como um todo. Desenvolvimento front-end é uma das mais rápidas disciplinas de crescimento no desenvolvimento de software e para garantir que os nossos padrões são capazes de manter o ritmo, queremos que você nos de um fork aqui no Git Hub, mande nos pull requests, envie-nos issues, e adicionar questões para debatermos padrões emergentes e práticas.
 
-We hope to encourage other developers to think about how to best standardize their approaches to development, to propose their own ideas for debate and for inclusion in our version of the document, and to adapt our standards for their own unique development practices. What better way of achieving consensus on how best to develop in our discipline than through feedback from members of that discipline themselves?
+Nós esperamos encorajar outros desenvolvedores a pensar sobre a melhor forma de padronizar suas abordagens ao desenvolvimento, ao propor suas próprias idéias para o debate e para a inclusão em nossa versão do documento, e para adaptar os nossos padrões de suas próprias práticas de desenvolvimento únicas. Qual a melhor maneira de obter um consenso sobre a melhor forma de desenvolver em nossa disciplina que através de feedback dos membros de que a disciplina a si mesmos?
 
-## Structure of Page Content
+## Estrutura do conteúdo da página
 
-The index.php file is used to include each of the .html files contained within the /sections/ directory. We have separated the different sections that make up the page into individual files so that it is easier to edit, basically making the content of the page more modular. This is also part of what we consider a best practice when dealing with large projects, as if it were an application involving lots of code, that several people work on.
+O arquivo index.php é usado para incluir cada um dos arquivos HTML contido dentro das seções / / diretório. Temos separadas as diferentes seções que compõem a página em arquivos individuais, de modo que é mais fácil de editar, basicamente tornando o conteúdo da página mais modular. Isso também faz parte do que consideramos uma boa prática quando se trata de grandes projetos, como se fosse uma aplicação que envolve lotes do código, que o trabalho de várias pessoas sobre.
 
-Each of these files include content wrapped within sections. This should be self-explanatory I think. In each section, we make use of all h1-h6 heading tags multiple times since HTML5 lets you use as many as you like. Of course, we try to always use them and all other HTML5 tags appropriately, and making use of semantic tags where they are best suited.
+Cada um desses arquivos incluem conteúdo embrulhado dentro das seções. Este deve ser de preferência auto-explicativo. Em cada seção, fazemos uso de todos as tags h1-h6 de cabeçalho, várias vezes, desde que o HTML5 permite que você use muitos a seu gosto. Claro, nós tentamos sempre usá-los e todas as outras tags HTML5 de forma adequada, e fazendo uso de tags semânticas onde eles são mais adequados.
 
-
-Refer to the HTML5 outline of the document in the wiki to get a better idea of the page architecture: http://goo.gl/xEjB5
+Consulte o esboço HTML5 do documento no wiki para ter uma idéia melhor da arquitetura da página: http://goo.gl/xEjB5

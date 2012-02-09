@@ -54,7 +54,7 @@
 	
 	<h3>Formatação do CSS</h3>
 	
-	<p>Mantenha a formatação dos seletores CSS na mesma linha e cada propriedade em sua própria linha. As declarações devem ser identadas.</p>
+	<p>Mantenha a formatação dos seletores CSS em uma mesma linha e cada propriedade em sua própria linha. As declarações devem ser identadas.</p>
 
 	<p>Insira um reforço com 2 ou 4 espaços para estilos relacionados ou filhos. Isso permite uma organização visual hierárquica e torna mais fácil (para algumas pessoas) a leitura da folha de estilos.</p>
 
@@ -76,7 +76,7 @@
 
 	<h4>Alfabetizar</h4>
 
-	<p>Se você for um obcecado por performance <a href="http://www.barryvan.com.au/2009/08/css-minifier-and-alphabetiser/">alfabetizando as propriedades CSS você aumenta as chances de maiores padrões repetitivos estarem presentes para auxiliar na compressão GZIP</a>.</p> 
+	<p>Se você for um obcecado por performance, <a href="http://www.barryvan.com.au/2009/08/css-minifier-and-alphabetiser/">alfabetize as propriedades do CSS, assim você aumenta as chances de maiores padrões repetitivos estarem presentes para auxiliar na compressão GZIP</a>.</p> 
 	
 	<h3>Classes vs. IDs</h3>
 
@@ -92,7 +92,7 @@
 	
 	<h3>Convenção de nomenclatura para seletores</h3>
 
-	<p>É sempre preferível dar nome a algo, seja ele um ID ou uma classe, pela natureza do <strong>que é</strong> ao invés do <strong>que ele parece</strong>. Por exemplo, um nome de classe <code>bigBlueText</code> para uma nota especial em uma página é algo totalmente sem sentido se tiver sido alterado para ter um texto menor com a cor vermelha. Usando uma convenção mais inteligente como <code>noteText</code> é melhor, porque quando ocorrerem mudanças visuais, o nome continuará a fazer sentido.</p>	
+	<p>Prefira sempre dar nome a algo pela natureza do <strong>que é</strong> ao invés do <strong>que ele parece</strong>, seja ele um ID ou uma classe. Por exemplo, um nome de classe <code>bigBlueText</code> para uma nota especial em uma página é algo totalmente sem sentido se tiver sido alterado para ter um texto menor com a cor vermelha. Usando uma convenção mais inteligente como <code>noteText</code> é melhor, porque quando ocorrerem mudanças visuais, o nome continuará a fazer sentido.</p>	
 	
 	<h3>Seletores</h3>
 
@@ -112,11 +112,11 @@
 
 	<p>Navegadores <a href="http://www.w3.org/TR/2009/PR-css3-selectors-20091215/">calculam a especificidade</a> para determinar quais regras do CSS devem ser aplicadas. Se dois seletores aplicam uma regra para o mesmo elemento, o que tiver com <strong>maior especificidade ganha</strong>.</p>
 
-	<p>IDs tem uma especificidade maior que os de seletores de atributo, e seletores de classe têm maior especificidade do que qualquer número de elementos de seleção. Sempre tente usar IDs para aumentar a especificidade. Há momentos em que podemos tentar aplicar uma regra CSS a um elemento e ele não funciona, não importa o que tentamos. Provavelmente porque a especificidade do seletor usado é inferior ao outro e as propriedades do mais alto está tomando precedência sobre aqueles que você deseja aplicar. Isto é mais comum quando se trabalha com uma folha de estilos maior e complexa e geralmente não é um grande problema quando se trata de projetos menores.</p>
+	<p>IDs tem uma especificidade maior que os de seletores de atributo, e seletores de classe têm maior especificidade do que qualquer número de elementos de seleção. Sempre tente usar IDs para aumentar a especificidade. Há momentos em que podemos tentar aplicar uma regra CSS a um elemento e ele não funciona, não importa o que tentamos. Provavelmente porque a especificidade do seletor usado é inferior ao outro e as propriedades do mais alto estão tomando precedência sobre aqueles que você deseja aplicar. Isto é mais comum quando se trabalha com uma folha de estilos maior e complexa e geralmente não é um grande problema quando se trata de projetos menores.</p>
 	
 	<h5>Calculando especificidade</h5>
 
-	<p>Ao trabalhar com uma larga e complexa folha de estilos, sempre é útil saber como calcular o valor de especificidade de um seletor  para salvar o seu tempo e tornar os seus seletores mais eficientes.</p>
+	<p>Ao trabalhar com uma larga e complexa folha de estilos, sempre é útil saber como calcular o valor de especificidade de um seletor para salvar o seu tempo e tornar os seus seletores mais eficientes.</p>
 
 	<p>Especificidade é calculada contando vários componentes do seu CSS e expressá-los nessa forma (a,b,c,d).
 	
@@ -127,7 +127,7 @@
 		<li>Estilo em linha (inline): a = 1 – (1,0,0,0)</li>
 	</ul>
 
-	<p>No entanto, pode ser melhor usar uma calculadora de especificidade.</p>
+	<p>No entanto, pode ser melhor usar uma calculadora de especificidade:</p>
 	
 	<ul>
 		<li><a href="">Calculadora de Especificidade</a></li>
@@ -135,7 +135,7 @@
 		<li><a href="http://www.brunildo.org/test/IEASpec.html#a">IE bugs de especificidade</a></li>
 	</ul>
 
-	<p>Usando <code>!important</code> você substitui todas as especificidades, não importa quão alto for. Nós evitamos usá-lo por este motivo. Na maioria das vezes não é necessário. Mesmo se você precisa substituir um seletor em uma folha de estilo que você não tem acesso, geralmente há formas de substituir sem usar <code>!important</code>. Se possível, evite.</p>
+	<p>Usando <code>!important</code> você substitui todas as especificidades, não importa o quão alto for. Nós evitamos usá-lo por este motivo. Na maioria das vezes não é necessário. Mesmo se você precisa substituir um seletor em uma folha de estilo que você não tem acesso, geralmente há formas de substituir sem usar <code>!important</code>. Se possível, evite-o.</p>
 
 	<h3>Pixels vs. Ems</h3>
 	
@@ -188,9 +188,9 @@
 
 	<h3>Abreviação</h3>
 
-	<p>Em geral, é preferido a abreviação do CSS por causa da sua concisão e possibilidade de mais tarde voltar e adicionar em valores que já estão presentes, como é o caso do margin e padding. Desenvolvedores devem estar cientes do acrónimo <abbr title="Top Right Bottom Left">TRBL</abbr>, denotando a ordem em que os lados de um elemento são definidas, em sentido anti-horário: topo, para direita, abaixo e para a esquerda. Se <em>bottom</em> não estiver definido, ele herda o valor do <em>top</em>. Da mesma maneira, se <em>left</em> não for definido, ele herdará o valor do <em>right</em>. Se apenas o valor de <em>top</em> for definido, todos os outros lados herdam o mesmo valor declarado.</p>
+	<p>Em geral, é preferível a abreviação do CSS por causa da sua concisão e possibilidade de mais tarde voltar e adicionar em valores que já estão presentes, como é o caso do <code>margin</code> e <code>padding</code>. Desenvolvedores devem estar cientes do acrónimo <abbr title="Top Right Bottom Left">TRBL</abbr>, denotando a ordem em que os lados de um elemento são definidas, em sentido anti-horário: topo, para direita, abaixo e para a esquerda. Se <em>bottom</em> não estiver definido, ele herda o valor do <em>top</em>. Da mesma maneira, se <em>left</em> não for definido, ele herdará o valor do <em>right</em>. Se apenas o valor de <em>top</em> for definido, todos os outros lados herdam o mesmo valor declarado.</p>
 
-	<p class="normalize">Para mais informações sobre como reduzir a redundância de código na folha de estilo, e usando abreviação em geral:</p>
+	<p class="normalize">Para mais informações sobre como reduzir a redundância de código na folha de estilo, e como usar abreviação em geral:</p>
 	
 	<ul>
 		<li><a href="http://qrayg.com/journal/news/css-background-shorthand">http://qrayg.com/journal/news/css-background-shorthand</a></li>
@@ -205,7 +205,7 @@
 		<li>Você nunca deve usar imagens para criar espaços em branco.</li>
 		<li>Use <a href="#_leverage_css_sprites">CSS sprites generosamente</a>. Eles tornam o efeito hover mais fácil, melhoram o tempo carregamento da página e reduzem as emissões de dióxido de carbono.</li>
 
-		<li>Normalmente, todas as imagens devem ser cortadas com um fundo transparente (PNG8). Elas devem ser cortadas bem nos limites da imagem. </li>
+		<li>Normalmente, todas as imagens devem ser cortadas com um fundo transparente (PNG8). Elas devem ser cortadas bem nos limites da imagem.</li>
 			<ul>
 				<li>No entanto, o logo sempre deve ter um background matte e padding antes do corte. (para que outras pessoas possam criar um hotlink para o arquivo).</li>
 			</ul>
@@ -219,7 +219,7 @@
 	<h4>Títulos</h4>
 	
 	<ul>
-		<li>Definir um estilo padrão para títulos <code>h1-h6</code>, incluindo cabeçalhos com links. É útil declarar estes no topo do seu documento CSS, e modificá-los como for necessário para manter a consistência em todo o site.</li>
+		<li>Definir um estilo padrão para títulos <code>h1-h6</code>, incluindo cabeçalhos com links. É útil declarar estes no topo do seu documento CSS, e modificá-los conforme for necessário para manter a consistência em todo o site.</li>
 		<li>Cabeçalhos devem mostrar uma hierarquia que indicam diferentes níveis de importância de cima para baixo, começando com <code>h1</code> tendo o maior tamanho de fonte</li>
 		<li>SEO: Para se ter uma ideia aproximada de como a hierarquia da página está organizada e legível, use a barra de ferramentas de desenvolvedor (Developer Toolbar) para desabilitar o CSS. Você vai acabar visualizando seu site com apenas texto de todas as suas tags <code>h1-h6</code>, <code>strong</code>, <code>em</code> etc.</li>
 	</ul>

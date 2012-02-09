@@ -1,10 +1,10 @@
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if lt IE 7]> <html class="no-js ie ie6" lang="pt-BR"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie ie7" lang="pt-BR"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="pt-BR"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="pt-BR"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="pt-BR"><!--<![endif]-->
     <head><meta charset="utf-8">
 
 
@@ -12,7 +12,7 @@
 <!--
                 _^_
                / _)
-        .-^^^-/ /          we like dinosaurs as much as you do.
+        .-^^^-/ /         nós gostamos de dinossauros tanto quanto você.
     __/       /
     <__.|_|-|_|
 

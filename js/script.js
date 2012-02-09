@@ -39,7 +39,7 @@ var ISOBAR = {
 				//console.log({ 'a': anchor, 'tag': tag, 'hx': hx[i] });
 				
 				if (tag === 'h1') {
-					hx[i].innerHTML += '<a href="#" class="backAnchor" title="Top">Back to Top</a>';
+					hx[i].innerHTML += '<a href="#" class="backAnchor" title="Topo">Voltar ao topo</a>';
 				}
 			}
 			toc.style.display = 'block';
