@@ -19,9 +19,9 @@ include_once('layout/header.php');
 				</canvas>
 
                 <ul id="social">
-					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=5&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="facebook"></a></li>
-					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=7&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="twitter"></a></li>
-					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=2&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://na.isobar.com/standards/&source=Shareaholic" id="delicious"></a></li>
+					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=5&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://andrecomws.com/lab/code-standards/&source=Shareaholic" id="facebook"></a></li>
+					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=7&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://andrecomws.com/lab/code-standards/&source=Shareaholic" id="twitter"></a></li>
+					<li><a class="icon" href="http://www.shareaholic.com/api/share/?v=1&apitype=1&apikey=8943b7fd64cd8b1770ff5affa9a9437b&service=2&title=Isobar%20North%20America's%20Coding%20Standards%20and%20Frontend%20development%20Best%20Practices&link=http://andrecomws.com/lab/code-standards/&source=Shareaholic" id="delicious"></a></li>
 					<li><a href="http://na.isobar.com" id="linkback">Retornar Isobar US</a></li>
 				</ul>
 			</header>
