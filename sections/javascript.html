@@ -7,9 +7,9 @@
 		
 		<h1>JavaScript</h1>
 
-		<p>JavaScript é o terceiro componente principal de uma página web. Código JavaScript quando devidamente aplicado a uma página, melhora consideravelmente a experiência do usuário, através do controle de eventos e da camada de comportamento geral.</p>
+		<p>JavaScript é o terceiro componente principal de uma página web. Código JavaScript quando devidamente aplicado, melhora consideravelmente a experiência do usuário, através do controle de eventos e da camada de comportamento geral.</p>
 
-		<p>JavaScript tem visto uma explosão em sua popularidade nos últimos anos com poderosas implementações no navegador que finalmente habilitadas possibilitam a criação de aplicações web completas. O uso cuidadoso de JavaScript permite a manipulação e controle total sobre outros dois componentes de criação de páginas web, o <a href="#markup">HTML</a> e <a href="#css">CSS</a>. Hoje, a estrutura das páginas e o visual podem ser manipulados em tempo real, sem que seja necessário atualizar a página completamente.</p>
+		<p>JavaScript tem visto uma explosão em sua popularidade nos últimos anos. Ganhou poderosas implementações no navegador que agora possibilitam a criação de aplicações web completas. O uso cuidadoso de JavaScript permite a manipulação e controle total sobre outros dois componentes de criação de páginas web, o <a href="#markup">HTML</a> e <a href="#css">CSS</a>. Hoje, a estrutura das páginas e o visual podem ser manipulados em tempo real, sem que seja necessário atualizar a página completamente.</p>
 
 	</div>
 
@@ -31,14 +31,14 @@
 		</li>
 		<li>Nomeie variáveis e funções de forma lógica. Por exemplo: <code>popUpWindowForAd</code>, ao invés <code>myWindow</code>.</li>
         <li>Não faça reduções ao nomear variáveis. Com exceção dos tradicionais <code>i</code> etc. Para loops <code>for</code>, variáveis devem ter nomes longos o suficiente para ter significado. </li>
-		<li>Documentação deve seguir a estrutura do <a href="http://www.naturaldocs.org/documenting.html">NaturalDocs</a>.</li>
-		<li>Constantes ou variáveis de configuração (como duração de animações, etc.) devem ficam no começo do arquivo.</li>
+		<li>A documentação deve seguir a estrutura do <a href="http://www.naturaldocs.org/documenting.html">NaturalDocs</a>.</li>
+		<li>Constantes ou variáveis de configuração (como duração de animações etc.) devem ficam no começo do arquivo.</li>
 
 		<li>Esforce-se para criar funções que possam ser generalizadas, ter parâmetros e valores de retorno. Isto permite a reutilização substancial do código e, quando combinada com includes ou scripts externos, podem reduzir a sobrecarga quando os scripts tem necessidade de mudar. Por exemplo, em vez da difícil codificação de uma janela pop-up com tamanho de janela, opções, urls, considere apenas criar uma função que tenha tamanho, url e opções como variáveis.</li>
 
 		<li>Comente o seu código! Isso ajuda a reduzir o tempo gasto com soluções de problemas em funções JavaScript.</li>
 		<li>Não perca seu tempo com <code>&lt;!-- --&gt;</code>, comentários que cercam sua linha javascript, a menos que você se preocupe com o Netscape 4.&nbsp;:)</li>
-		<li>Organize seu código com o <a href="http://kaijaeger.com/articles/the-singleton-design-pattern-in-javascript.html">Object Literal/Singleton</a>, como <a href="http://www.yuiblog.com/blog/2007/06/12/module-pattern/">Module Pattern</a>, ou com o <a href="http://mckoss.com/jscript/object.htm">Object with constructors</a>.</li>
+		<li>Organize seu código com o <a href="http://kaijaeger.com/articles/the-singleton-design-pattern-in-javascript.html">Object Literal/Singleton</a>, com o <a href="http://www.yuiblog.com/blog/2007/06/12/module-pattern/">Module Pattern</a>, ou com o <a href="http://mckoss.com/jscript/object.htm">Object with constructors</a>.</li>
 	
 	  <li>Reduza variáveis globais - quanto menos você as criar, melhor. Geralmente uma para o espaço de sua aplicação é um bom número.
 			<figure class="preCode">Ao especificar qualquer variável global, identifique-a de forma clara.</figure>		
@@ -82,7 +82,7 @@
 	
 	<h4>plugins.js</h4>
 
-	<p>O plugin.js serve para conter todos os códigos de plugins utilizados no seu site. Em vez de linkar para diferentes arquivos, nós podemos melhorar o desempenho incluindo todo o código em apenas um arquivo. Embora exista exceções para este uso, um plugin extremamente grande, que é somente usado em uma única página raramente visitada, deve ficar em um arquivo separado e só linkado na página que é usado. Embora, na maioria das vezes é seguro colocar versões comprimidas de todos os seus plugins num arquivo só para fácil acesso.</p>
+	<p>O plugin.js serve para conter todos os códigos de plugins utilizados no seu site. Em vez de linkar para diferentes arquivos, nós podemos melhorar o desempenho incluindo todo o código em apenas um arquivo. Embora exista exceções para este uso, um plug-in extremamente grande que é somente usado em uma única página raramente visitada, deve ficar em um arquivo separado e só linkado na página que é usado. Embora, na maioria das vezes é seguro colocar versões comprimidas de todos os seus plugins num arquivo só para fácil acesso.</p>
 
 	<p>Aqui um exemplo de como um arquivo deve se parecer, incluindo uma pequena tabela de conteúdo. Isso pode servir como um guia prático para os plugins que estão em uso, incluindo URLs para documentação, razão para o uso e assim por diante:</p>
 	
@@ -165,7 +165,7 @@
 
 	<h4>Script.js</h4>
 
-	<p>Script.js serve para conter o código da sua aplicação ou site. Novamente, esta não é sempre a melhor solução em uma grande equipe. Projetos grandes e ricos em recursos podem acabar dividindo o código do aplicativo em módulos ou recursos em arquivos específicos. Para sites pequenos, aplicações simples ou protótipo inicial, para fazer mais sentido, deixe seu trabalho no scripts.js.</p>
+	<p>Script.js serve para conter o código da sua aplicação ou site. Novamente, esta não é sempre a melhor solução em uma grande equipe. Projetos grandes e ricos em recursos podem acabar dividindo o código do aplicativo em módulos ou recursos em arquivos específicos. Para sites pequenos, aplicações simples ou protótipo inicial, deixe seu trabalho no scripts.js para fazer mais sentido.</p>
 
 	<p>Um exemplo simplificado, usando o padrão da <a href='http://paulirish.com/2009/markup-based-unobtrusive-comprehensive-dom-ready-execution/'>marcação discreta abrangente baseada em DOM, pronta pra execução</a>, poderia ser algo como segue abaixo:</p>
 
@@ -208,17 +208,17 @@
 	
 	<h2>Variáveis, ID &amp; Classes</h2>
 
-	<p>Todas as variáveis JavaScript devem ser escritas apenas com minúsculas ou camelCase. A única exceção para este caso é se estiver criando Constructor Functions, quais começam com maiúsculas por tradição. Todo <code>id</code> e declarações <code>class</code> em CSS, devem ser escritas apenas usando minúsculas. Não use traços, nem sublinhados.</p>
+	<p>Todas as variáveis JavaScript devem ser escritas apenas com minúsculas ou camelCase. A única exceção para este caso é se estiver criando Constructor Functions, quais começam com maiúsculas por tradição. Todo <code>id</code> e declarações <code>class</code> em CSS, devem ser escritas usando apenas minúsculas. Não use traços, nem sublinhados.</p>
 	
 	<h3>Delegação de Eventos</h3>
 
-	<p>Ao atribuir ouvintes de eventos discretos, normalmente é aceitável atribuir diretamente para os elementos que irão disparar alguma ação resultante. Embora, ocasionalmente pode haver vários elementos que correspondam aos critérios para o qual você está verificando, e anexando ouvintes de eventos para cada um deles, isso pode afetar negativamente o desempenho, nestes casos, ao invés disso, você deve usar a delegação de evento:</p>
+	<p>Ao atribuir ouvintes de eventos discretos, normalmente é aceitável atribuir diretamente para os elementos que irão disparar alguma ação resultante. No entanto, ocasionalmente pode existir vários elementos que correspondam aos critérios para o qual você está verificando, e anexando ouvintes de eventos para cada um deles, isso pode afetar negativamente o desempenho, nestes casos, ao invés disso você deve usar a delegação de evento:</p>
 	
 	<p>jQuery's <a href="http://api.jquery.com/delegate">delegate()</a> é preferível ao <a href="http://api.jquery.com/live">live()</a>, por questões de performance.</p>
 	
 	<h3>Debugando</h3>
 
-	<p>Mesmo com os melhores validadores, inevitavelmente certas peculiaridades do navegador irão lhe causar problemas. Aqui algumas boas ferramentas que irão lhe auxiliar a refinar a integridade do seu código ou ajudar na velocidade de carregamento. É importante que você tenha todas essas ferramentas disponíveis com você, apesar do navegador primário que você usa para desenvolvimento. Nós recomendamos primeiramente codificar para o Firefox e Safari, então Google Chrome e Opera e adicionando tweaks com comentários condicionais apenas para o Internet Explorer. A lista a seguir possuí vários depuradores úteis e analisadores de velocidade:</p>
+	<p>Mesmo com os melhores validadores, inevitavelmente certas peculiaridades do navegador irão lhe causar problemas. Abaixo algumas ferramentas úteis que irão lhe auxiliar a refinar a integridade do seu código ou ajudar na velocidade de carregamento. É importante que você tenha todas essas ferramentas disponíveis com você, apesar do navegador primário que você usa para desenvolvimento. Nós recomendamos primeiramente codificar para o Firefox e Safari, então Google Chrome e Opera e adicionando tweaks com comentários condicionais apenas para o Internet Explorer. A lista a seguir possuí vários depuradores úteis e analisadores de velocidade:</p>
 	
 	<ul>
 		<li><strong>Firefox</strong>: <a href="http://getfirebug.com/">Firebug</a>, <a href="http://code.google.com/speed/page-speed/">Page Speed</a>, <a href="http://developer.yahoo.com/yslow/">YSlow</a></li>

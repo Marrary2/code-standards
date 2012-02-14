@@ -25,7 +25,7 @@
 	
 	<h3>Pular Navegação</h3>
 
-	<p>Se o seu site possuí elementos de navegação antes do conteúdo principal, providencie um link para "Pular para o conteúdo principal" para os leitores de tela. Este é um link que normalmente é escondido usando CSS, mas será mostrado no leitor de tela para saltar passando a navegação e indo	 direto pro conteúdo.</p>
+	<p>Se o seu site possuí elementos de navegação antes do conteúdo principal, providencie um link para "Pular para o conteúdo principal" para os leitores de tela. Esse é um link que normalmente é escondido com o uso de CSS, mas será exibido no leitor de tela para pular a navegação e indo direto pro conteúdo.</p>
 	
 	<textarea class="brush:css">
 	.skipnav { text-align: left; }
@@ -55,7 +55,7 @@
 
 	<h3>Tab Index</h3>
 
-	<p>O índice-guia de um documento começa com o primeiro link do documento e funciona através de todos eles na ordem de origem até o fim. Este é frequentemente inutilizável e não intuitivo na forma que os elementos aparecem na tela. Se assegure que a ordem de tabulação dos links e elementos ativos é lógica, usando o atributo <code>tabindex</code>. Elementos de formulário devem ser tabulados através da ordem que um usuário espera concluí-lo, não necessariamente na ordem das tags em HTML.</p>
+	<p>O índice-guia de um documento começa com o primeiro link do documento e funciona através de todos eles do início até o fim. Este é frequentemente inutilizável e não intuitivo na forma que os elementos aparecem na tela. Se assegure que a ordem de tabulação dos links e elementos ativos é lógica, usando o atributo <code>tabindex</code>. Elementos de formulário devem ser tabulados através da ordem que um usuário espera concluí-lo, não necessariamente na ordem das tags em HTML.</p>
 
 	<h3>Siglas/Abreviações</h3>
 
@@ -63,13 +63,13 @@
 
 	<h3>Imagens</h3>
 	
-	<p>Todas as imagens devem ter o atributo <code>alt</code>. Atributos <code>alt</code> dão significado e descrevem o conteúdo da imagem. Se a imagem é puramente decorativa, atributos <code>alt</code> devem ser marcados em branco usando <code>alt=""</code>. Não coloque algo como <code>alt="Esta imagem é apenas decorativa"</code>, como será lido por leitores de tela, será irritante para o usuário.</p>
+	<p>Todas as imagens devem ter o atributo <code>alt</code>. Atributos <code>alt</code> dão significado e descrevem o conteúdo da imagem. Se a imagem é puramente decorativa, atributos <code>alt</code> devem ser marcados em branco usando <code>alt=""</code>. Não coloque algo como <code>alt="Esta imagem é apenas decorativa"</code>, isso será irritante para o usuário que utiliza leitores de tela.</p>
 
 	<p>Não use imagens para criar espaços ou outros efeitos similares, isso pode ser feito apenas usando CSS.</p>
 
 	<h3>Flash e Substituição de Imagem</h3>
 
-	<p>Sempre use um conteúdo HTML de backup para o flash. Todas as promo imagens devem usar CSS baseado em substituição de imagem em vez de tags <code>alt</code>. </p>
+	<p>Sempre use um conteúdo HTML de backup para o flash. Todas as promo imagens devem usar CSS baseado em substituição de imagem em vez de tags <code>alt</code>.</p>
 
 	<figure class="preCode">Fallback para versões sem flash:</figure>
 	<textarea class="brush:html">
@@ -95,7 +95,7 @@
 	
 	<h3>Tabelas</h3>
 
-	<p>Tabelas devem ser usadas apenas para dados tabulares. Ele não deve ser usado com propósitos de apresetnação ou de layout. Quando usamos tabelas:</p>
+	<p>Tabelas devem ser usadas apenas para dados tabulares. Ela não deve ser usada com propósitos de apresetnação ou de layout. Quando usar tabelas:</p>
 
 	<ul>
 		<li>Use o elemento <code>th</code> para o cabeçalho da tabela. Se o cabeçalho tiver abreviações, use o atributo <code>abbr</code> para expandi-las.</li>
@@ -108,14 +108,14 @@
 
 	<ul>
 		<li>Texto deve dar leitura com alto contraste. Ou use um fundo claro com um texto escuro ou vice-versa. Um texto muito claro com um fundo claro é praticamente impossível de se ler para a maioria das pessoas, e pode ser ainda pior para quem é daltônico.</li>
-		<li>Não use vermelho e verde juntos para fazer distinções entre funcionalidades chaves - uma porcentagem de pessoas não serão capazes de  distinguir-los.</li>
+		<li>Não use vermelho e verde juntos para fazer distinções entre funcionalidades chaves - uma porcentagem de pessoas não serão capazes de distinguir-los.</li>
 	</ul>
 
-	<p>O site <a href="http://www.w3.org/WAI/ER/existingtools.html" target="_blank">WAI contêm uma lista de ferramentas focadas para usuários com daltonismo</a>, algumas que lhe permitem ver o site como as pessoas com diferentes tipos de daltonismo.</p>
+	<p>O site <a href="http://www.w3.org/WAI/ER/existingtools.html" target="_blank">WAI contêm uma lista de ferramentas focadas para usuários com daltonismo</a>, algumas que lhe permitem ver o site como as pessoas com diferentes tipos de daltonismo vêem.</p>
 
 	<h3>JavaScript</h3>
 
-	<p>Páginas devem continuar a ser funcionais mesmo desabilitando o JavaScript. Aplicações devem degradar normalmente, ou quando possível fazer uso dos <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">polyfills</a>, para adicionar aos navegadores mais antigos as funcionalidades que eles não as suportam.</p>
+	<p>Páginas devem continuar a ser funcionais mesmo desabilitando o JavaScript. Aplicações devem degradar normalmente, ou quando possível fazer uso dos <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">polyfills</a>, para adicionar aos navegadores mais antigos as funcionalidades que eles não suportam.</p>
 
 	<h3>Seção 508</h3>
 	
