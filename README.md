@@ -1,4 +1,4 @@
-#  Isobar Front-end Padrões de Desenvolvimento traduzido para PT-BR [http://andrecomws.com/lab/code-standards/](http://andrecomws.com/lab/code-standards/)
+#  Isobar Front-end - Padrões de Desenvolvimento traduzidos para PT-BR [http://andrecomws.com/lab/code-standards/](http://andrecomws.com/lab/code-standards/)
 
 Original em Inglês: [http://na.isobar.com/standards](http://na.isobar.com/standards)
 
