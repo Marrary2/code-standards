@@ -1,7 +1,7 @@
 <?php
 $page_title = "Padrões de código &amp; melhores práticas em Front-end";
 $page_keywords = "Isobar code standards, coding standards, frontend development, frontend best practices, html code standards, html5 code standards, css code standards, best code practices, development, frontend development";
-$page_description = "Padrões de Codificação Isobar América do Norte e Práticas Frontend Melhores desenvolvimento";
+$page_description = "Padrões de Codificação da Isobar América do Norte e Melhores Práticas de desenvolvimento Front-end";
 $protocol = (strstr('https',$_SERVER['SERVER_PROTOCOL']) === false)?'http':'https'; 
 $page_root = $protocol.'://'.$_SERVER['SERVER_NAME'].dirname($_SERVER['REQUEST_URI']);
 include_once('layout/header.php');
